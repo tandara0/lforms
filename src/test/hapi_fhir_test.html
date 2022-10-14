@@ -48,19 +48,18 @@
 
   <div id="lforms-form">
     <div class="panel panel-default">
-      <h3 class="panel-heading">User Page</h3>
+      <h3 class="panel-heading">환자용 문진 페이지</h3>
+      <br>
       <div class="panel-body">
-        <p>아래를 입력해주세요.</p>
-        <br><br>
+        <p>아래 버튼을 눌러주세요.</p>
+        <br>
 
+        <button id="test" class="btn btn-primary" onclick="getBasicQuestionnaire()">기초문진 가져오기</button>
 
-        <input type="file" id="fileAnchor" onchange="loadFile(event)" class="hide" />
-        <button id="loadBtn" type="button" class="btn btn-success" onclick="document.querySelector('#fileAnchor').click()">Load From File</button>
 
       </div>
     </div>
 
-    <br><br>
     <wc-lhc-form id='test-form'></wc-lhc-form>
 
   </div>
@@ -109,25 +108,34 @@
         }
       }
 
+      function getBasicQuestionnaire() {
+        var dataURL = "http://14.32.42.32:8081/fhir/Questionnaire/102/_history/1?_format=json"
+        getFromHapiFhir(dataURL)
+      }
 
-      /**
-       * Load a data file from local file system
-       */
-      function loadFile(event) {
-        var reader = new FileReader();
-        var fileAnchor = document.querySelector('#fileAnchor');
-        reader.onload = function() {
-          var questionnaire = JSON.parse(reader.result);
-          var fhirVersion = "R4";
-          // var formData = LForms.Util.convertFHIRQuestionnaireToLForms(questionnaire, fhirVersion)
-          // var mergedData = LForms.Util.mergeFHIRDataIntoLForms(questionnaire, formData, fhirVersion)
-          // LForms.Util.addFormToPage(mergedData, 'myFormContainer');
-          LForms.Util.addFormToPage(questionnaire, 'myFormContainer');
-        };
-        reader.readAsText(event.target.files[0]);
+
+      function getFromHapiFhir(dataURL) {
+        fetch(dataURL, {
+          method: 'GET'
+        })
+          .then(function(response)  {
+            if (response.ok) {
+              return response.json();
+            }
+            else {
+              console.log('Failed');
+              console.log(response);
+            }
+          }).then(function(data) {
+          showQuestionnaire(data);
+        });
 
       }
 
+      function showQuestionnaire(questionnaire) {
+        // var questionnaire = JSON.parse(reader.result);
+          LForms.Util.addFormToPage(questionnaire, 'myFormContainer');
+        }
 
     </script>
 
