@@ -1,0 +1,253 @@
+{
+  "status": "draft",
+  "title": "기초 문진",
+  "resourceType": "Questionnaire",
+  "id": "21",
+  "meta": {
+    "versionId": "1",
+    "lastUpdated": "2019-11-12T13:42:04.292+00:00",
+    "source": "#VwT6diAf0ctxW1RS"
+  },
+  "text": {
+    "status": "generated",
+    "div": ""
+  },
+  "url": "http://hl7.org/fhir/Questionnaire/0815",
+  "subjectType": [ "Patient", "Condition", "Observation" ],
+  "date": "2010",
+  "code": [ {
+    "system": "http://example.org/system/code/lifelines/nl",
+    "code": "VL 1-1, 18-65_1.2.2",
+    "display": "Basic Question"
+  } ],
+  "item": [
+    {
+    "linkId": "2",
+    "text": "환자 정보",
+    "type": "group",
+    "item": [ {
+      "linkId": "2.1",
+      "text": "이름",
+      "type": "string"
+    }, {
+      "linkId": "2.2",
+      "text": "생년월일",
+      "type": "date"
+    }, {
+      "linkId": "2.3",
+      "text": "성별",
+      "type": "string"
+    }, {
+      "linkId": "2.4",
+      "text": "전화번호",
+      "type": "string"
+    }, {
+      "linkId": "2.5",
+      "text": "주소",
+      "type": "string"
+    }, {
+      "linkId": "2.6",
+      "text": "몸무게",
+      "type": "quantity",
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unitOption",
+          "valueCoding": {
+            "display": "kg",
+            "code": "kg"
+          }
+        },
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unitOption",
+          "valueCoding": {
+            "display": "lbs",
+            "code": "[lb_av]"
+          }
+        }
+      ]
+    }, {
+      "linkId": "2.7",
+      "text": "키",
+      "type": "quantity",
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unitOption",
+          "valueCoding": {
+            "display": "cm",
+            "code": "cm"
+          }
+        }
+      ]
+    }, {
+      "linkId": "2.8",
+      "text": "BMI",
+      "type": "quantity"
+    } ]
+  },
+    {
+    "linkId": "3",
+    "text": "가족력",
+    "type": "choice",
+    "repeats": true,
+    "answerOption": [ {
+      "valueCoding": {
+        "code": "H",
+        "display": "HTN"
+      }
+    }, {
+      "valueCoding": {
+        "code": "D",
+        "display": "DM"
+      }
+    }, {
+      "valueCoding": {
+        "code": "CH",
+        "display": "Cerebral hemorrhage"
+      }
+    }, {
+      "valueCoding": {
+        "code": "CI",
+        "display": "Cerebral infarction"
+      }
+    } ]
+  },
+    {
+    "linkId": "4",
+    "text": "병력",
+    "type": "choice",
+    "repeats": true,
+    "answerOption": [ {
+      "valueCoding": {
+        "code": "H",
+        "display": "HTN"
+      }
+    }, {
+      "valueCoding": {
+        "code": "D",
+        "display": "DM"
+      }
+    }, {
+      "valueCoding": {
+        "code": "CH",
+        "display": "Dyslipidemia"
+      }
+    }, {
+      "valueCoding": {
+        "code": "CI",
+        "display": "Viral Hepatitis"
+      }
+    }, {
+      "valueCoding": {
+        "code": "T",
+        "display": "Tb"
+      }
+    }, {
+      "valueCoding": {
+        "code": "M",
+        "display": "MI"
+      }
+    }, {
+      "valueCoding": {
+        "code": "C",
+        "display": "CAOD"
+      }
+    }, {
+      "valueCoding": {
+        "code": "A",
+        "display": "Arrhythmia"
+      }
+    }, {
+      "valueCoding": {
+        "code": "CH",
+        "display": "Cerebral hemorrhage"
+      }
+    }, {
+      "valueCoding": {
+        "code": "CI",
+        "display": "Cerebral infarction"
+      }
+    }, {
+      "valueCoding": {
+        "code": "CO",
+        "display": "COPD"
+      }
+    }, {
+      "valueCoding": {
+        "code": "AS",
+        "display": "Asthma"
+      }
+    } ]
+  },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/terminology-server",
+          "valueUrl": "https://clinicaltables.nlm.nih.gov/fhir/R4"
+        },
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+          "valueCodeableConcept": {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/questionnaire-item-control",
+                "code": "gtable",
+                "display": "Group Table"
+              }
+            ],
+            "text": "Group Table"
+          }
+        },
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/variable",
+          "valueExpression": {
+            "name": "strengthFormLookup",
+            "language": "application/x-fhir-query",
+            "expression": "https://clinicaltables.nlm.nih.gov/fhir/R4/CodeSystem/$lookup?system=https://clinicaltables.nlm.nih.gov/fhir/CodeSystem/rxterms&code={{item.where(linkId='medication').answer.valueCoding.code}}&property=STRENGTHS_AND_FORMS"
+          }
+        }
+      ],
+      "linkId": "medications_table",
+      "text": "복용약",
+      "type": "group",
+      "repeats": true,
+      "item": [
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "autocomplete",
+                    "display": "Auto-complete"
+                  }
+                ],
+                "text": "Auto-complete"
+              }
+            }
+          ],
+          "linkId": "medication",
+          "text": "약 이름",
+          "type": "choice",
+          "answerValueSet": "https://clinicaltables.nlm.nih.gov/fhir/R4/ValueSet/rxterms"
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-answerExpression",
+              "valueExpression": {
+                "language": "text/fhirpath",
+                "expression": "%strengthFormLookup.parameter.where(name='property' and part.where(name='code' and value='STRENGTHS_AND_FORMS').exists()).part.where(name='value').value"
+              }
+            }
+          ],
+          "linkId": "strength",
+          "text": "투약량",
+          "type": "open-choice"
+        }
+      ]
+    }
+  ]
+}
+
