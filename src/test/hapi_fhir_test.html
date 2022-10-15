@@ -50,6 +50,7 @@
     <div class="panel panel-default">
       <h3 class="panel-heading">환자용 문진 페이지</h3>
       <br>
+
       <div class="panel-body">
         <p>아래 버튼을 눌러주세요.</p>
         <br>
@@ -58,64 +59,40 @@
 
 
       </div>
+      <div id="myFormContainer"></div>
+
+      <br>
+      <button id="get-sdc-response" class="btn btn-primary" onclick="sendQuestionnaireResponse()">제출하기</button>
     </div>
 
-    <wc-lhc-form id='test-form'></wc-lhc-form>
-
   </div>
-  <div id="myFormContainer"></div>
+
 
 
 
 
     <script type="text/javascript">
 
-      /**
-       * Get FHIR version from the version list
-       */
       function getFHIRVersion() {
         return "R4";
       }
 
-      /**
-       * Get FHIR context from the globale object LForms
-       */
       function getFHIR() {
-        return LForms.FHIR["R4"];
+        return LForms.FHIR[getFHIRVersion()];
       }
 
 
-      /**
-       * Get SDC 'Questionnaire' data from the form and display it in console
-       */
-      function showFHIRSDCQuestionnaire() {
-        if (testForm.questionnaire) {
-          var fhir = getFHIR();
-          var sdc = fhir.SDC.convertLFormsToQuestionnaire(testForm.questionnaire);
-          var fhirString = JSON.stringify(sdc, null, 4);
-          console.log(fhirString);
-        }
-      }
 
-      /**
-       * Get 'Questionnaire' data from the form and display it in console
-       */
-      function showFHIRQuestionnaire() {
-        if (testForm.questionnaire) {
-          var sdc = getFHIR().SDC.convertLFormsToQuestionnaire(testForm.questionnaire, true);
-          var fhirString = JSON.stringify(sdc, null, 4);
-          console.log(fhirString);
-        }
-      }
+
 
       function getBasicQuestionnaire() {
-        var dataURL = "http://14.32.42.32:8081/fhir/Questionnaire/102/_history/1?_format=json"
-        getFromHapiFhir(dataURL)
+        const hapiURL = "http://14.32.42.32:8081/fhir/Questionnaire/102/_history/1?_format=json";
+        getFromHapiFhir(hapiURL)
       }
 
 
-      function getFromHapiFhir(dataURL) {
-        fetch(dataURL, {
+      function getFromHapiFhir(hapiURL) {
+        fetch(hapiURL, {
           method: 'GET'
         })
           .then(function(response)  {
@@ -129,13 +106,45 @@
           }).then(function(data) {
           showQuestionnaire(data);
         });
-
       }
+
+    function postToHapiFhir(hapiURL, data) {
+      fetch(hapiURL, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      })
+        .then(function(response)  {
+          if (response.ok) {
+            alert("제출에 성공했습니다.");
+          } else {
+            alert("실패했습니다 !!!");
+        }
+      });
+    }
+
+      let gBasicQuestionnaire = null;
 
       function showQuestionnaire(questionnaire) {
         // var questionnaire = JSON.parse(reader.result);
+        gBasicQuestionnaire = questionnaire
           LForms.Util.addFormToPage(questionnaire, 'myFormContainer');
-        }
+      }
+
+      function sendQuestionnaireResponse() {
+        const qr = getQuestionnaireResponse();
+        const hapiURL = "http://14.32.42.32:8081/fhir/QuestionnaireResponse?_format=json&_pretty=true";
+        postToHapiFhir(hapiURL, qr);
+      }
+
+      function getQuestionnaireResponse() {
+        const qr = LForms.Util.getFormFHIRData('QuestionnaireResponse', getFHIRVersion(),
+          'myFormContainer'); //, {extract: true} )
+        qr.identifier = {"system":"LForms.sample", "value":gBasicQuestionnaire.id}
+        return qr
+      }
 
     </script>
 
