@@ -1,8 +1,8 @@
 {
   "status": "draft",
-  "title": "기초 문진",
+  "title": "문진 1단계",
   "resourceType": "Questionnaire",
-  "id": "21",
+  "id": "102",
   "meta": {
     "versionId": "1",
     "lastUpdated": "2019-11-12T13:42:04.292+00:00",
@@ -23,30 +23,10 @@
   "item": [
     {
     "linkId": "2",
-    "text": "환자 정보",
+    "text": "기초 정보",
     "type": "group",
     "item": [ {
       "linkId": "2.1",
-      "text": "이름",
-      "type": "string"
-    }, {
-      "linkId": "2.2",
-      "text": "생년월일",
-      "type": "date"
-    }, {
-      "linkId": "2.3",
-      "text": "성별",
-      "type": "string"
-    }, {
-      "linkId": "2.4",
-      "text": "전화번호",
-      "type": "string"
-    }, {
-      "linkId": "2.5",
-      "text": "주소",
-      "type": "string"
-    }, {
-      "linkId": "2.6",
       "text": "몸무게",
       "type": "quantity",
       "extension": [
@@ -66,7 +46,7 @@
         }
       ]
     }, {
-      "linkId": "2.7",
+      "linkId": "2.2",
       "text": "키",
       "type": "quantity",
       "extension": [
@@ -79,7 +59,7 @@
         }
       ]
     }, {
-      "linkId": "2.8",
+      "linkId": "2.3",
       "text": "BMI",
       "type": "quantity"
     } ]

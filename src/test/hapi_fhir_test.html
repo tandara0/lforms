@@ -25,6 +25,10 @@
       font-size: 12px;
       border-radius: 4px;
     }
+    .tab {
+      display: inline-block;
+      margin-left: 25px;
+    }
 
     .btn-success {
       color: #fff;
@@ -46,24 +50,35 @@
 
 <body style="padding: 1em">
 
+
   <div id="lforms-form">
     <div class="panel panel-default">
-      <h3 class="panel-heading">환자용 문진 페이지</h3>
+      <h1 class="panel-heading">환자용 문진 페이지</h1>
+      <br>
+
+      <p>이름: <span class="tab"></span>   <input type="text" id="name" name="name" required minlength="4" maxlength="20" size="10"></p>
+      <p>생년월일:  <input type="date" id="birth" name="birth" required minlength="4" maxlength="8" size="10"></p>
+      <p>성별: <span class="tab"></span>
+        <select name="sex">
+          <option value="남">남</option>
+          <option value="여">여</option>
+        </select>
+      </p>
+
       <br>
 
       <div class="panel-body">
-        <p>아래 버튼을 눌러주세요.</p>
-        <br>
-
-        <button id="test" class="btn btn-primary" onclick="getBasicQuestionnaire()">기초문진 가져오기</button>
-
-
+        <button id="test" class="btn btn-primary" onclick="getBasicQuestionnaire()">문진 시작하기</button>
       </div>
+
       <div id="myFormContainer"></div>
 
       <br>
-      <button id="get-sdc-response" class="btn btn-primary" onclick="sendQuestionnaireResponse()">제출하기</button>
+      <br>
+
     </div>
+
+    <button id="get-sdc-response" class="btn btn-primary" onclick="sendQuestionnaireResponse()">제출하기</button>
 
   </div>
 
@@ -86,7 +101,7 @@
 
 
       function getBasicQuestionnaire() {
-        const hapiURL = "http://14.32.42.32:8081/fhir/Questionnaire/102/_history/1?_format=json";
+        const hapiURL = "http://14.32.42.32:8081/fhir/Questionnaire/102?_format=json";
         getFromHapiFhir(hapiURL)
       }
 
