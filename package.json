@@ -11,7 +11,7 @@
   "license": "See LICENSE.md",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "ng serve --port 4202 --host=0.0.0.0 --disable-host-check",
     "start-public": "node bin/start-public.js",
     "start-dist-public": "node bin/start-public.js  --dist",
     "build:lforms-dev:update": "npm run build:lforms-dev && npm run build:prepare-zip && shx cp -rf dist/$npm_package_name-$npm_package_version/webcomponent dist/$npm_package_name && npm run copy-built-files",
