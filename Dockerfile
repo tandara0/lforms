@@ -6,14 +6,14 @@ RUN mkdir -p /app
 WORKDIR /app
 
 COPY package*.json /app/
-RUN npm install --legacy-peer-deps 
+RUN npm install --legacy-peer-deps
 
 COPY . /app
 RUN npm run build
 
 # RUN
 FROM nginx:1.17.1-alpine
-COPY --from=build /app/dist /usr/share/nginx/html
+COPY --from=build /app/dist/lforms /usr/share/nginx/html
 #COPY dist /usr/share/nginx/html
 #COPY dist/webcomponent /usr/share/nginx/html/webcomponent
 
