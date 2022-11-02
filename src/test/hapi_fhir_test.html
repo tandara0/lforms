@@ -56,10 +56,10 @@
       <h1 class="panel-heading">환자용 문진 페이지</h1>
       <br>
 
-      <p>이름: <span class="tab"></span>   <input type="text" id="name" name="name" required minlength="4" maxlength="20" size="10"></p>
-      <p>생년월일:  <input type="date" id="birth" name="birth" required minlength="4" maxlength="8" size="10"></p>
+      <p>이름: <span class="tab"></span>   <input type="text" id="patientName" name="patientName" required minlength="4" maxlength="20" size="10"></p>
+      <p>생년월일:  <input type="date" id="patientBirth" name="patientBirth" required minlength="4" maxlength="8" size="10"></p>
       <p>성별: <span class="tab"></span>
-        <select name="sex">
+        <select name="patientSex">
           <option value="남">남</option>
           <option value="여">여</option>
         </select>
@@ -99,9 +99,13 @@
 
 
 
+      // 172.30.1.58, 14.32.42.32
+      const host = "http://14.32.42.32:8083/"
+      const myInquiryID = 1010
 
       function getBasicQuestionnaire() {
-        const hapiURL = "http://14.32.42.32:8081/fhir/Questionnaire/102?_format=json";
+        const hapiURL = `${host}api/inquiry?inquiryID=${myInquiryID}`;
+
         getFromHapiFhir(hapiURL)
       }
 
@@ -111,15 +115,15 @@
           method: 'GET'
         })
           .then(function(response)  {
+            console.log(response);
             if (response.ok) {
               return response.json();
             }
             else {
               console.log('Failed');
-              console.log(response);
             }
           }).then(function(data) {
-          showQuestionnaire(data);
+          if (data != null) showQuestionnaire(data);
         });
       }
 
@@ -150,7 +154,18 @@
 
       function sendQuestionnaireResponse() {
         const qr = getQuestionnaireResponse();
-        const hapiURL = "http://14.32.42.32:8081/fhir/QuestionnaireResponse?_format=json&_pretty=true";
+        let patientName = document.getElementById("patientName").value;
+        if (patientName === '') {
+          alert("환자 이름을 입력해주세요.");
+          return;
+        }
+        let patientBirth = document.getElementById("patientBirth").value;
+        if (patientBirth === '') {
+          alert("환자 생년월일을 입력해주세요.");
+          return;
+        }
+        const hapiURL = `${host}api/inquiry/answer?patientName=${patientName}&birthDate=${patientBirth}&inquiryID=${myInquiryID}`;
+
         postToHapiFhir(hapiURL, qr);
       }
 
