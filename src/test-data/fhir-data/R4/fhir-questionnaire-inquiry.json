@@ -614,161 +614,139 @@
       ]
     },
     {
-      "linkId": "5",
+      "linkId": "Problem",
       "text": "현병력",
       "type": "choice",
+      "code": [
+        {
+          "system": "http://loinc.org",
+          "code": "75326-9",
+          "display": "Problem"
+        }
+      ],
       "repeats": true,
       "answerOption": [
         {
           "valueCoding": {
-            "code": "H",
-            "display": "HTN"
+            "code": "38341003",
+            "display": "고혈압"
           }
         },
         {
           "valueCoding": {
-            "code": "D",
-            "display": "DM"
+            "code": "10725009",
+            "display": "양성고혈압"
           }
         },
         {
           "valueCoding": {
-            "code": "CH",
-            "display": "Dyslipidemia"
+            "code": "73211009",
+            "display": "당뇨"
           }
         },
         {
           "valueCoding": {
-            "code": "CI",
-            "display": "Viral Hepatitis"
+            "code": "44054006",
+            "display": "2형당뇨"
           }
         },
         {
           "valueCoding": {
-            "code": "T",
-            "display": "Tb"
+            "code": "370992007",
+            "display": "이상지질혈증"
           }
         },
         {
           "valueCoding": {
-            "code": "M",
-            "display": "MI"
+            "code": "66071002",
+            "display": "B형 간염"
           }
         },
         {
           "valueCoding": {
-            "code": "C",
-            "display": "CAOD"
+            "code": "56717001",
+            "display": "결핵"
           }
         },
         {
           "valueCoding": {
-            "code": "A",
-            "display": "Arrhythmia"
+            "code": "63739005",
+            "display": "관상동맥질환"
           }
         },
         {
           "valueCoding": {
-            "code": "CH",
-            "display": "Cerebral hemorrhage"
+            "code": "698247007",
+            "display": "부정맥"
           }
         },
         {
           "valueCoding": {
-            "code": "CI",
-            "display": "Cerebral infarction"
-          }
-        },
-        {
-          "valueCoding": {
-            "code": "CO",
-            "display": "COPD"
-          }
-        },
-        {
-          "valueCoding": {
-            "code": "AS",
-            "display": "Asthma"
+            "code": "49436004",
+            "display": "심방세동"
           }
         }
       ]
     },
     {
-      "linkId": "6",
+      "linkId": "Medical history",
       "text": "과거병력",
       "type": "choice",
+      "code": [
+        {
+          "system": "http://loinc.org",
+          "code": "72185-2",
+          "display": "Medical history [RHEA]"
+        }
+      ],
       "repeats": true,
       "answerOption": [
         {
           "valueCoding": {
-            "code": "H",
-            "display": "HTN"
+            "code": "None",
+            "display": "없음"
           }
         },
         {
           "valueCoding": {
-            "code": "D",
-            "display": "DM"
+            "code": "266995000",
+            "display": "심혈관계질환"
           }
         },
         {
           "valueCoding": {
-            "code": "CH",
-            "display": "Dyslipidemia"
+            "code": "275544003",
+            "display": "심장질환"
           }
         },
         {
           "valueCoding": {
-            "code": "CI",
-            "display": "Viral Hepatitis"
+            "code": "399211009",
+            "display": "심근경색"
           }
         },
         {
           "valueCoding": {
-            "code": "T",
-            "display": "Tb"
+            "code": "131471000119104",
+            "display": "부정맥"
           }
         },
         {
           "valueCoding": {
-            "code": "M",
-            "display": "MI"
+            "code": "275540007",
+            "display": "뇌질환"
           }
         },
         {
           "valueCoding": {
-            "code": "C",
-            "display": "CAOD"
+            "code": "428267002",
+            "display": "뇌출혈"
           }
         },
         {
           "valueCoding": {
-            "code": "A",
-            "display": "Arrhythmia"
-          }
-        },
-        {
-          "valueCoding": {
-            "code": "CH",
-            "display": "Cerebral hemorrhage"
-          }
-        },
-        {
-          "valueCoding": {
-            "code": "CI",
-            "display": "Cerebral infarction"
-          }
-        },
-        {
-          "valueCoding": {
-            "code": "CO",
-            "display": "COPD"
-          }
-        },
-        {
-          "valueCoding": {
-            "code": "AS",
-            "display": "Asthma"
+            "code": "431310008",
+            "display": "뇌경색"
           }
         }
       ]
@@ -777,13 +755,109 @@
       "linkId": "7",
       "text": "수술병력",
       "type": "choice",
-      "repeats": true
+      "code": [
+        {
+          "system": "http://loinc.org",
+          "code": "72185-2",
+          "display": "Medical history [RHEA]"
+        }
+      ],
+      "repeats": true,
+      "answerOption": [
+        {
+          "valueCoding": {
+            "code": "428449006",
+            "display": "뇌수술"
+          }
+        },
+        {
+          "valueCoding": {
+            "code": "428661006",
+            "display": "뇌동맥루수슬"
+          }
+        },
+        {
+          "valueCoding": {
+            "code": "429074009",
+            "display": "심혈관계 처치 및 수술"
+          }
+        },
+        {
+          "valueCoding": {
+            "code": "161624007",
+            "display": "폐절제술"
+          }
+        },
+        {
+          "valueCoding": {
+            "code": "10997971000119103",
+            "display": "폐엽절제술"
+          }
+        }
+      ]
     },
     {
-      "linkId": "8",
+      "linkId": "Allergies",
       "text": "알레르기불내성",
       "type": "choice",
-      "repeats": true
+      "code": [
+        {
+          "system": "http://loinc.org",
+          "code": "48765-2",
+          "display": "Allergies"
+        }
+      ],
+      "repeats": true,
+      "answerOption": [
+        {
+          "valueCoding": {
+            "code": "61582004",
+            "display": "알레르기비염"
+          }
+        },
+        {
+          "valueCoding": {
+            "code": "24079001",
+            "display": "아토피피부염"
+          }
+        },
+        {
+          "valueCoding": {
+            "code": "473460002",
+            "display": "알레르기결막염"
+          }
+        },
+        {
+          "valueCoding": {
+            "code": "40275004",
+            "display": "접촉성피부염"
+          }
+        },
+        {
+          "valueCoding": {
+            "code": "419199007",
+            "display": "물질알레르기"
+          }
+        },
+        {
+          "valueCoding": {
+            "code": "414285001",
+            "display": "식품알레르기"
+          }
+        },
+        {
+          "valueCoding": {
+            "code": "782555009",
+            "display": "우유알레르기"
+          }
+        },
+        {
+          "valueCoding": {
+            "code": "91935009",
+            "display": "땅콩알레르기"
+          }
+        }
+      ]
     },
     {
       "linkId": "9",
