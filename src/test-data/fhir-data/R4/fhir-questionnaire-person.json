@@ -1,0 +1,39 @@
+{
+  "resourceType": "Questionnaire",
+  "id": "5770417",
+  "meta": {
+    "versionId": "2",
+    "lastUpdated": "2022-10-31T04:32:24.000-04:00",
+    "source": "#08rWN0zTjQqpqqIH"
+  },
+  "title": "Bumin Person for PoC",
+  "status": "draft",
+  "subjectType": [
+    "Patient",
+    "Condition",
+    "Observation"
+  ],
+  "date": "2022-11-03",
+  "item": [
+    {
+      "linkId": "basic-1",
+      "text": "이름",
+      "type": "string"
+    },
+    {
+      "linkId": "basic-2",
+      "text": "생년월일",
+      "type": "date"
+    },
+    {
+      "linkId": "basic-3",
+      "text": "성별",
+      "type": "choice"
+    },
+    {
+      "linkId": "basic-4",
+      "text": "주증상",
+      "type": "date"
+    }
+  ]
+}
