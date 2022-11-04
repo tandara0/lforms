@@ -27,7 +27,7 @@
   ],
   "item": [
     {
-      "linkId": "2",
+      "linkId": "Vital Sign",
       "text": "생체징후",
       "type": "group",
       "item": [
@@ -95,7 +95,7 @@
                   "valueCoding": {
                     "system": "http://unitsofmeasure.org",
                     "code": "mm[Hg]",
-                    "display": "millimeter of mercury"
+                    "display": "mm[Hg]"
                   }
                 }
               ],
@@ -116,8 +116,8 @@
                   "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unitOption",
                   "valueCoding": {
                     "system": "http://unitsofmeasure.org",
-                    "code": "mm[Hg]",
-                    "display": "millimeter of mercury"
+                    "code": "millimeter of mercury",
+                    "display": "mm[Hg]"
                   }
                 }
               ],
@@ -140,12 +140,12 @@
               "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unitOption",
               "valueCoding": {
                 "code": "bpm",
-                "display": "bpm"
+                "display": "회"
               }
             }
           ],
           "linkId": "2.4",
-          "text": "맥박수",
+          "text": "맥박수 (분당횟수)",
           "type": "quantity",
           "initial": [
             {
@@ -160,13 +160,13 @@
             {
               "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unitOption",
               "valueCoding": {
-                "code": "회/분",
-                "display": "회/분"
+                "code": "bpm",
+                "display": "회"
               }
             }
           ],
           "linkId": "2.5",
-          "text": "호흡수",
+          "text": "호흡수 (분당횟수)",
           "type": "quantity",
           "initial": [
             {
@@ -183,7 +183,7 @@
               "valueCoding": {
                 "system": "http://unitsofmeasure.org",
                 "code": "Cel",
-                "display": "degree Celsius"
+                "display": "℃"
               }
             }
           ],
@@ -205,7 +205,7 @@
               "valueCoding": {
                 "system": "http://unitsofmeasure.org",
                 "code": "cm",
-                "display": "centimeter"
+                "display": "cm"
               }
             }
           ],
@@ -229,9 +229,16 @@
           "valueUrl": "https://clinicaltables.nlm.nih.gov/fhir/R4"
         }
       ],
-      "linkId": "3",
+      "linkId": "Chief complaint",
       "text": "주증상",
       "type": "group",
+      "code": [
+        {
+          "system": "http://loinc.org",
+          "code": "10154-3",
+          "display": "Chief complaint Narrative - Reported"
+        }
+      ],
       "item": [
         {
           "extension": [
@@ -249,57 +256,300 @@
               }
             }
           ],
-          "linkId": "3.1",
+          "linkId": "Chief complaint Name",
           "text": "증상명",
-          "type": "open-choice",
-          "answerValueSet": "http://localhost:8083/api/inquiry/ValueSet/sample"
-        }
-      ]
-    },
-    {
-      "text": "공통질문",
-      "linkId": "9738922481565",
-      "type": "string",
-      "item": [
-        {
-          "linkId": "3.2",
-          "text": "증상시작시점",
-          "type": "dateTime"
-        },
-        {
-          "linkId": "3.3",
-          "text": "증상진행양상",
           "type": "open-choice",
           "answerOption": [
             {
               "valueCoding": {
-                "code": "G",
+                "code": "404640003",
+                "display": "어지러움"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "49727002",
+                "display": "기침"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "64531003",
+                "display": "콧물"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "21522001",
+                "display": "복통"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "300359004",
+                "display": "구토"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "linkId": "Common Questions",
+      "text": "공통질문",
+      "type": "group",
+      "item": [
+        {
+          "linkId": "Onset",
+          "text": "언제부터 시작되었나요?",
+          "type": "dateTime",
+          "code": [
+            {
+              "system": "http://loinc.org",
+              "code": "76425-8",
+              "display": "Date of onset - Reported"
+            }
+          ]
+        },
+        {
+          "linkId": "Course",
+          "text": "진행 양상이 어떻나요?",
+          "type": "choice",
+          "code": [
+            {
+              "system": "http://loinc.org",
+              "code": "89261-2",
+              "display": "Clinical course"
+            }
+          ],
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "61751001",
                 "display": "서서히"
               }
             },
             {
               "valueCoding": {
-                "code": "D",
+                "code": "385315009",
                 "display": "갑자기"
               }
             },
             {
               "valueCoding": {
-                "code": "CH",
+                "code": "44180009",
                 "display": "반복적"
               }
             },
             {
               "valueCoding": {
-                "code": "CI",
+                "code": "90734009",
                 "display": "만성적"
               }
             },
             {
               "valueCoding": {
-                "code": "CI",
+                "code": "261665006",
                 "display": "모르겠음"
               }
+            }
+          ]
+        },
+        {
+          "linkId": "Frequency",
+          "text": "얼마나 자주 나타나나요?",
+          "type": "choice",
+          "code": [
+            {
+              "system": "http://loinc.org",
+              "code": "56826-1",
+              "display": "Problem frequency"
+            }
+          ],
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "385432009",
+                "display": "해당사항없음"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "255238004",
+                "display": "지속적"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "70232002",
+                "display": "자주"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "27789000",
+                "display": "가끔"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "307486002",
+                "display": "이번 한번"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "261665006",
+                "display": "모르겠음"
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "Duration",
+          "text": "얼마나 지속 되나요?",
+          "type": "choice",
+          "code": [
+            {
+              "system": "http://loinc.org",
+              "code": "64748-7",
+              "display": "Symptoms duration"
+            }
+          ],
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "385432009",
+                "display": "해당사항없음"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "162449000",
+                "display": "계속"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "162443004",
+                "display": "몇 초"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "162444005",
+                "display": "몇 분"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "162445006",
+                "display": "몇 시간"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "162446007",
+                "display": "몇 일"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "162447003",
+                "display": "몇 주"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "162448008",
+                "display": "몇 달"
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "Body site",
+          "text": "위치가 어디인가요?",
+          "type": "choice",
+          "code": [
+            {
+              "system": "http://loinc.org",
+              "code": "39111-0",
+              "display": "Body site"
+            }
+          ],
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "385432009",
+                "display": "해당사항없음"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "442083009",
+                "display": "해부학적위치"
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "Side",
+          "text": "어느 쪽인가요?",
+          "type": "choice",
+          "code": [
+            {
+              "system": "http://loinc.org",
+              "code": "20228-3",
+              "display": "Anatomic part Laterality"
+            }
+          ],
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "385432009",
+                "display": "해당사항없음"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "51440002",
+                "display": "양측"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "24028007",
+                "display": "오른쪽"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "7771000",
+                "display": "왼쪽"
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "pain",
+          "text": "통증이 있으신 경우 얼마나 아프신가요? [0~10 단계]",
+          "type": "integer",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/minValue",
+              "valueInteger": 0
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/maxValue",
+              "valueInteger": 10
+            }
+          ],
+          "code": [
+            {
+              "system": "http://loinc.org",
+              "code": "80316-3",
+              "display": "Pain scale [Type]"
             }
           ]
         },
