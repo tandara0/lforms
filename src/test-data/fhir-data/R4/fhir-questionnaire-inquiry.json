@@ -862,8 +862,447 @@
     {
       "linkId": "9",
       "text": "사회력",
-      "type": "choice",
-      "repeats": true
+      "type": "group",
+      "item": [
+        {
+          "text": "흡연",
+          "linkId": "7279774149692",
+          "type": "choice",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "77176002",
+                "display": "현재흡연"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "428041000124106",
+                "display": "간헐적 흡연"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "8517006",
+                "display": "금연"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "266919005",
+                "display": "피워본 적이 없음"
+              }
+            }
+          ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unitOption",
+              "valueCoding": {
+                "display": "갑/년"
+              }
+            }
+          ],
+          "linkId": "Smoker (finding)",
+          "text": "현재 흡연량 (갑/년)",
+          "type": "quantity",
+          "enableWhen": [
+            {
+              "question": "7279774149692",
+              "operator": "=",
+              "answerCoding": {
+                "code": "77176002",
+                "display": "현재흡연"
+              }
+            }
+          ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unitOption",
+              "valueCoding": {
+                "display": "갑/년"
+              }
+            }
+          ],
+          "linkId": "Occasional tobacco smoker (finding)",
+          "text": "이전 흡연량 (갑/년)",
+          "type": "quantity",
+          "enableWhen": [
+            {
+              "question": "7279774149692",
+              "operator": "=",
+              "answerCoding": {
+                "code": "428041000124106",
+                "display": "간헐적 흡연"
+              }
+            },
+            {
+              "question": "7279774149692",
+              "operator": "=",
+              "answerCoding": {
+                "code": "8517006",
+                "display": "금연"
+              }
+            }
+          ],
+          "enableBehavior": "any"
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unitOption",
+              "valueCoding": {
+                "display": "년"
+              }
+            }
+          ],
+          "linkId": "Ex-smoker (finding) - duration",
+          "text": "금연기간 (년)",
+          "type": "quantity",
+          "enableWhen": [
+            {
+              "question": "7279774149692",
+              "operator": "=",
+              "answerCoding": {
+                "code": "8517006",
+                "display": "금연"
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "All Smoker",
+          "text": "담배 종류",
+          "type": "choice",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "722497008",
+                "display": "Cigar (physical object)"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "722496004",
+                "display": "Cigarette (physical object)"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "722498003",
+                "display": "Electronic cigarette (physical object)"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "735240008",
+                "display": "Electronic cigarette liquid containing nicotine (physical object)"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "735239006",
+                "display": "Electronic cigarette liquid without nicotine (physical object)"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "35001000087102",
+                "display": "Smoking pipe (physical object)"
+              }
+            }
+          ],
+          "enableWhen": [
+            {
+              "question": "7279774149692",
+              "operator": "=",
+              "answerCoding": {
+                "code": "77176002",
+                "display": "현재흡연"
+              }
+            },
+            {
+              "question": "7279774149692",
+              "operator": "=",
+              "answerCoding": {
+                "code": "428041000124106",
+                "display": "간헐적 흡연"
+              }
+            },
+            {
+              "question": "7279774149692",
+              "operator": "=",
+              "answerCoding": {
+                "code": "8517006",
+                "display": "금연"
+              }
+            }
+          ],
+          "enableBehavior": "any"
+        },
+        {
+          "text": "음주",
+          "linkId": "7279774149693",
+          "type": "choice",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "219006",
+                "display": "현재음주"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "105542008",
+                "display": "금주"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "783261004",
+                "display": "마셔본 적이 없음"
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "Current drinker of alcohol (finding) - choice",
+          "code": "219006",
+          "text": "현재 음주 (종류)",
+          "type": "choice",
+          "enableWhen": [
+            {
+              "question": "7279774149693",
+              "operator": "=",
+              "answerCoding": {
+                "code": "219006",
+                "display": "현재음주"
+              }
+            }
+          ],
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "소주잔"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "맥주잔"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "500ml 맥주잔"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "양주잔 (얼음)"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "양주잔 (스트레이트)"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "막거리잔"
+              }
+            }
+          ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unitOption",
+              "valueCoding": {
+                "display": "잔"
+              }
+            }
+          ],
+          "linkId": "Current drinker of alcohol (finding) - quantity",
+          "code": "219006",
+          "text": "현재 음주 (잔수/일주일)",
+          "type": "quantity",
+          "enableWhen": [
+            {
+              "question": "7279774149693",
+              "operator": "=",
+              "answerCoding": {
+                "code": "219006",
+                "display": "현재음주"
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "Current non-drinker of alcohol (finding) - choice",
+          "code": "219006",
+          "text": "과거 음주 (종류)",
+          "type": "choice",
+          "enableWhen": [
+            {
+              "question": "7279774149693",
+              "operator": "=",
+              "answerCoding": {
+                "code": "105542008",
+                "display": "금주"
+              }
+            }
+          ],
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "소주잔"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "맥주잔"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "500ml 맥주잔"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "양주잔 (얼음)"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "양주잔 (스트레이트)"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "막거리잔"
+              }
+            }
+          ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unitOption",
+              "valueCoding": {
+                "display": "잔"
+              }
+            }
+          ],
+          "linkId": "Current non-drinker of alcohol (finding) - quantity",
+          "code": "219006",
+          "text": "과거 음주 (잔수/일주일)",
+          "type": "quantity",
+          "enableWhen": [
+            {
+              "question": "7279774149693",
+              "operator": "=",
+              "answerCoding": {
+                "code": "105542008",
+                "display": "금주"
+              }
+            }
+          ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unitOption",
+              "valueCoding": {
+                "display": "년"
+              }
+            }
+          ],
+          "linkId": "Current non-drinker of alcohol (finding) - duration",
+          "text": "금주기간(년)",
+          "type": "quantity",
+          "enableWhen": [
+            {
+              "question": "7279774149693",
+              "operator": "=",
+              "answerCoding": {
+                "code": "105542008",
+                "display": "금주"
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "job",
+          "text": "직업",
+          "type": "choice",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "학생"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "주부"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "사무직"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "전산"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "영업"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "노무직"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "운전"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "식당"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "청소"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "배달"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "공장"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "운동"
+              }
+            }
+          ]
+        }
+      ]
     },
     {
       "extension": [
