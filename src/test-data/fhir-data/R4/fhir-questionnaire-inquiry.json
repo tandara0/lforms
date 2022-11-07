@@ -33,7 +33,7 @@
       "item": [
         {
           "text": "성별",
-          "linkId": "7279774149691",
+          "linkId": "sex",
           "type": "choice",
           "answerOption": [
             {
@@ -65,7 +65,7 @@
               }
             }
           ],
-          "linkId": "2.1",
+          "linkId": "weight",
           "text": "몸무게",
           "type": "quantity"
         },
@@ -79,12 +79,12 @@
               }
             }
           ],
-          "linkId": "2.2",
+          "linkId": "height",
           "text": "키",
           "type": "quantity"
         },
         {
-          "linkId": "2.3",
+          "linkId": "blood pressure",
           "text": "혈압",
           "type": "group",
           "item": [
@@ -99,7 +99,7 @@
                   }
                 }
               ],
-              "linkId": "2.3.1",
+              "linkId": "Systolic blood pressure",
               "text": "수축기",
               "type": "quantity",
               "initial": [
@@ -121,7 +121,7 @@
                   }
                 }
               ],
-              "linkId": "2.3.2",
+              "linkId": "Diastolic blood pressure",
               "text": "이완기",
               "type": "quantity",
               "initial": [
@@ -144,7 +144,7 @@
               }
             }
           ],
-          "linkId": "2.4",
+          "linkId": "hear rate",
           "text": "맥박수 (분당횟수)",
           "type": "quantity",
           "initial": [
@@ -165,7 +165,7 @@
               }
             }
           ],
-          "linkId": "2.5",
+          "linkId": "respiratory rate",
           "text": "호흡수 (분당횟수)",
           "type": "quantity",
           "initial": [
@@ -187,7 +187,7 @@
               }
             }
           ],
-          "linkId": "2.6",
+          "linkId": "body temperature",
           "text": "체온",
           "type": "quantity",
           "initial": [
@@ -209,7 +209,7 @@
               }
             }
           ],
-          "linkId": "2.7",
+          "linkId": "waste",
           "text": "배둘레",
           "type": "quantity",
           "initial": [
@@ -555,13 +555,13 @@
         },
         {
           "text": "임신상태",
-          "linkId": "9551649376924",
+          "linkId": "pregnant",
           "type": "choice",
           "item": [
             {
               "text": "임신 가능성이 있나요?",
               "type": "display",
-              "linkId": "9551649376924_helpText",
+              "linkId": "pregnant_helpText",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
@@ -603,7 +603,7 @@
           ],
           "enableWhen": [
             {
-              "question": "7279774149691",
+              "question": "sex",
               "operator": "=",
               "answerCoding": {
                 "display": "여"
@@ -752,7 +752,7 @@
       ]
     },
     {
-      "linkId": "7",
+      "linkId": "operation history",
       "text": "수술병력",
       "type": "choice",
       "code": [
@@ -860,13 +860,13 @@
       ]
     },
     {
-      "linkId": "9",
+      "linkId": "social",
       "text": "사회력",
       "type": "group",
       "item": [
         {
           "text": "흡연",
-          "linkId": "7279774149692",
+          "linkId": "smoke",
           "type": "choice",
           "answerOption": [
             {
@@ -904,19 +904,28 @@
               }
             }
           ],
-          "linkId": "Smoker (finding)",
-          "text": "현재 흡연량 (갑/년)",
+          "linkId": "Occasional tobacco smoker (finding)",
+          "text": "이전 흡연량 (갑/년)",
           "type": "quantity",
           "enableWhen": [
             {
-              "question": "7279774149692",
+              "question": "smoke",
               "operator": "=",
               "answerCoding": {
-                "code": "77176002",
-                "display": "현재흡연"
+                "code": "428041000124106",
+                "display": "간헐적 흡연"
+              }
+            },
+            {
+              "question": "smoke",
+              "operator": "=",
+              "answerCoding": {
+                "code": "8517006",
+                "display": "금연"
               }
             }
-          ]
+          ],
+          "enableBehavior": "any"
         },
         {
           "extension": [
@@ -927,12 +936,12 @@
               }
             }
           ],
-          "linkId": "Occasional tobacco smoker (finding)",
-          "text": "이전 흡연량 (갑/년)",
+          "linkId": "Smoker (finding)",
+          "text": "현재 흡연량 (갑/년)",
           "type": "quantity",
           "enableWhen": [
             {
-              "question": "7279774149692",
+              "question": "smoke",
               "operator": "=",
               "answerCoding": {
                 "code": "428041000124106",
@@ -940,11 +949,11 @@
               }
             },
             {
-              "question": "7279774149692",
+              "question": "smoke",
               "operator": "=",
               "answerCoding": {
-                "code": "8517006",
-                "display": "금연"
+                "code": "77176002",
+                "display": "현재흡연"
               }
             }
           ],
@@ -964,7 +973,7 @@
           "type": "quantity",
           "enableWhen": [
             {
-              "question": "7279774149692",
+              "question": "smoke",
               "operator": "=",
               "answerCoding": {
                 "code": "8517006",
@@ -1017,7 +1026,7 @@
           ],
           "enableWhen": [
             {
-              "question": "7279774149692",
+              "question": "smoke",
               "operator": "=",
               "answerCoding": {
                 "code": "77176002",
@@ -1025,7 +1034,7 @@
               }
             },
             {
-              "question": "7279774149692",
+              "question": "smoke",
               "operator": "=",
               "answerCoding": {
                 "code": "428041000124106",
@@ -1033,7 +1042,7 @@
               }
             },
             {
-              "question": "7279774149692",
+              "question": "smoke",
               "operator": "=",
               "answerCoding": {
                 "code": "8517006",
@@ -1045,7 +1054,7 @@
         },
         {
           "text": "음주",
-          "linkId": "7279774149693",
+          "linkId": "alcohol",
           "type": "choice",
           "answerOption": [
             {
@@ -1075,7 +1084,7 @@
           "type": "choice",
           "enableWhen": [
             {
-              "question": "7279774149693",
+              "question": "alcohol",
               "operator": "=",
               "answerCoding": {
                 "code": "219006",
@@ -1131,7 +1140,7 @@
           "type": "quantity",
           "enableWhen": [
             {
-              "question": "7279774149693",
+              "question": "alcohol",
               "operator": "=",
               "answerCoding": {
                 "code": "219006",
@@ -1147,7 +1156,7 @@
           "type": "choice",
           "enableWhen": [
             {
-              "question": "7279774149693",
+              "question": "alcohol",
               "operator": "=",
               "answerCoding": {
                 "code": "105542008",
@@ -1203,7 +1212,7 @@
           "type": "quantity",
           "enableWhen": [
             {
-              "question": "7279774149693",
+              "question": "alcohol",
               "operator": "=",
               "answerCoding": {
                 "code": "105542008",
@@ -1226,7 +1235,7 @@
           "type": "quantity",
           "enableWhen": [
             {
-              "question": "7279774149693",
+              "question": "alcohol",
               "operator": "=",
               "answerCoding": {
                 "code": "105542008",
@@ -1332,7 +1341,7 @@
           }
         }
       ],
-      "linkId": "11",
+      "linkId": "medication",
       "text": "복용약",
       "type": "group",
       "repeats": true,
@@ -1353,7 +1362,7 @@
               }
             }
           ],
-          "linkId": "medication",
+          "linkId": "medication name",
           "text": "약 이름",
           "type": "choice",
           "answerValueSet": "https://clinicaltables.nlm.nih.gov/fhir/R4/ValueSet/rxterms"
@@ -1368,14 +1377,14 @@
               }
             }
           ],
-          "linkId": "strength",
+          "linkId": "medication strength",
           "text": "투약량",
           "type": "open-choice"
         }
       ]
     },
     {
-      "linkId": "12",
+      "linkId": "family",
       "text": "가족력",
       "type": "choice",
       "repeats": true,
@@ -1407,8 +1416,8 @@
       ]
     },
     {
+      "linkId": "review of system",
       "text": "계통문진",
-      "linkId": "8189686117416",
       "type": "string",
       "enableBehavior": "all"
     }
