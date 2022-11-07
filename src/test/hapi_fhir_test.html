@@ -45,6 +45,11 @@
     .hide {
       display: none;
     }
+
+    body {
+      max-width: 650px;
+    }
+
   </style>
 </head>
 
@@ -56,8 +61,8 @@
       <h1 class="panel-heading">(환자용) 문진 제출</h1>
       <br>
 
-      <p>이름: <span class="tab"></span>   <input type="text" id="patientName" name="patientName" required minlength="4" maxlength="20" size="10"></p>
-      <p>생년월일:  <input type="date" id="patientBirth" name="patientBirth" required minlength="4" maxlength="8" size="10"></p>
+      <p>이름: <span class="tab"></span>   <input type="text" id="patientName" name="patientName" value="Peter" required minlength="4" maxlength="20" size="10"></p>
+      <p>생년월일:  <input type="date" id="patientBirth" name="patientBirth" value = "1974-12-25" required minlength="4" maxlength="8" size="10"></p>
       <p>성별: <span class="tab"></span>
         <select name="patientSex">
           <option value="남">남</option>
