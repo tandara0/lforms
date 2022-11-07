@@ -614,185 +614,268 @@
       ]
     },
     {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+          "valueCodeableConcept": {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/questionnaire-item-control",
+                "code": "gtable",
+                "display": "Group Table"
+              }
+            ],
+            "text": "Group Table"
+          }
+        }
+      ],
       "linkId": "Problem",
       "text": "현병력",
-      "type": "choice",
-      "code": [
-        {
-          "system": "http://loinc.org",
-          "code": "75326-9",
-          "display": "Problem"
-        }
-      ],
+      "type": "group",
       "repeats": true,
-      "answerOption": [
+      "item": [
         {
-          "valueCoding": {
-            "code": "38341003",
-            "display": "고혈압"
-          }
+          "linkId": "Problem name",
+          "text": "병명",
+          "type": "choice",
+          "code": [
+            {
+              "system": "http://loinc.org",
+              "code": "75326-9",
+              "display": "Problem"
+            }
+          ],
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "38341003",
+                "display": "고혈압"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "10725009",
+                "display": "양성고혈압"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "73211009",
+                "display": "당뇨"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "44054006",
+                "display": "2형당뇨"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "370992007",
+                "display": "이상지질혈증"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "66071002",
+                "display": "B형 간염"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "56717001",
+                "display": "결핵"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "63739005",
+                "display": "관상동맥질환"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "698247007",
+                "display": "부정맥"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "49436004",
+                "display": "심방세동"
+              }
+            }
+          ]
         },
         {
-          "valueCoding": {
-            "code": "10725009",
-            "display": "양성고혈압"
-          }
-        },
-        {
-          "valueCoding": {
-            "code": "73211009",
-            "display": "당뇨"
-          }
-        },
-        {
-          "valueCoding": {
-            "code": "44054006",
-            "display": "2형당뇨"
-          }
-        },
-        {
-          "valueCoding": {
-            "code": "370992007",
-            "display": "이상지질혈증"
-          }
-        },
-        {
-          "valueCoding": {
-            "code": "66071002",
-            "display": "B형 간염"
-          }
-        },
-        {
-          "valueCoding": {
-            "code": "56717001",
-            "display": "결핵"
-          }
-        },
-        {
-          "valueCoding": {
-            "code": "63739005",
-            "display": "관상동맥질환"
-          }
-        },
-        {
-          "valueCoding": {
-            "code": "698247007",
-            "display": "부정맥"
-          }
-        },
-        {
-          "valueCoding": {
-            "code": "49436004",
-            "display": "심방세동"
-          }
+          "linkId": "Problem since",
+          "text": "증상시작시점",
+          "type": "date"
         }
       ]
     },
     {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+          "valueCodeableConcept": {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/questionnaire-item-control",
+                "code": "gtable",
+                "display": "Group Table"
+              }
+            ],
+            "text": "Group Table"
+          }
+        }
+      ],
       "linkId": "Medical history",
       "text": "과거병력",
-      "type": "choice",
-      "code": [
-        {
-          "system": "http://loinc.org",
-          "code": "72185-2",
-          "display": "Medical history [RHEA]"
-        }
-      ],
+      "type": "group",
       "repeats": true,
-      "answerOption": [
+      "item": [
         {
-          "valueCoding": {
-            "code": "None",
-            "display": "없음"
-          }
+          "linkId": "Medical history name",
+          "text": "병명",
+          "type": "choice",
+          "code": [
+            {
+              "system": "http://loinc.org",
+              "code": "72185-2",
+              "display": "Medical history [RHEA]"
+            }
+          ],
+          "repeats": true,
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "None",
+                "display": "없음"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "266995000",
+                "display": "심혈관계질환"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "275544003",
+                "display": "심장질환"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "399211009",
+                "display": "심근경색"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "131471000119104",
+                "display": "부정맥"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "275540007",
+                "display": "뇌질환"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "428267002",
+                "display": "뇌출혈"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "431310008",
+                "display": "뇌경색"
+              }
+            }
+          ]
         },
         {
-          "valueCoding": {
-            "code": "266995000",
-            "display": "심혈관계질환"
-          }
-        },
-        {
-          "valueCoding": {
-            "code": "275544003",
-            "display": "심장질환"
-          }
-        },
-        {
-          "valueCoding": {
-            "code": "399211009",
-            "display": "심근경색"
-          }
-        },
-        {
-          "valueCoding": {
-            "code": "131471000119104",
-            "display": "부정맥"
-          }
-        },
-        {
-          "valueCoding": {
-            "code": "275540007",
-            "display": "뇌질환"
-          }
-        },
-        {
-          "valueCoding": {
-            "code": "428267002",
-            "display": "뇌출혈"
-          }
-        },
-        {
-          "valueCoding": {
-            "code": "431310008",
-            "display": "뇌경색"
-          }
+          "linkId": "Medical history since",
+          "text": "증상시작시점",
+          "type": "date"
         }
       ]
     },
     {
-      "linkId": "operation history",
-      "text": "수술병력",
-      "type": "choice",
-      "code": [
+      "extension": [
         {
-          "system": "http://loinc.org",
-          "code": "72185-2",
-          "display": "Medical history [RHEA]"
+          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+          "valueCodeableConcept": {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/questionnaire-item-control",
+                "code": "gtable",
+                "display": "Group Table"
+              }
+            ],
+            "text": "Group Table"
+          }
         }
       ],
+      "linkId": "operation history",
+      "text": "수술병력",
+      "type": "group",
       "repeats": true,
-      "answerOption": [
+      "item": [
         {
-          "valueCoding": {
-            "code": "428449006",
-            "display": "뇌수술"
-          }
+          "linkId": "operation history name",
+          "text": "병명",
+          "type": "choice",
+          "code": [
+            {
+              "system": "http://loinc.org",
+              "code": "72185-2",
+              "display": "Medical history [RHEA]"
+            }
+          ],
+          "repeats": true,
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "428449006",
+                "display": "뇌수술"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "428661006",
+                "display": "뇌동맥루수슬"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "429074009",
+                "display": "심혈관계 처치 및 수술"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "161624007",
+                "display": "폐절제술"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "10997971000119103",
+                "display": "폐엽절제술"
+              }
+            }
+          ]
         },
         {
-          "valueCoding": {
-            "code": "428661006",
-            "display": "뇌동맥루수슬"
-          }
-        },
-        {
-          "valueCoding": {
-            "code": "429074009",
-            "display": "심혈관계 처치 및 수술"
-          }
-        },
-        {
-          "valueCoding": {
-            "code": "161624007",
-            "display": "폐절제술"
-          }
-        },
-        {
-          "valueCoding": {
-            "code": "10997971000119103",
-            "display": "폐엽절제술"
-          }
+          "linkId": "operation history since",
+          "text": "증상시작시점",
+          "type": "date"
         }
       ]
     },
