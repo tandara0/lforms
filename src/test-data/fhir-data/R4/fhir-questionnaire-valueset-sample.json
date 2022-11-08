@@ -1,0 +1,108 @@
+{
+  "resourceType": "Questionnaire",
+  "title": "Questionnaire Valueset sample",
+  "status": "draft",
+  "item": [
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/terminology-server",
+          "valueUrl": "https://clinicaltables.nlm.nih.gov/fhir/R4"
+        },
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+          "valueCodeableConcept": {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/questionnaire-item-control",
+                "code": "autocomplete",
+                "display": "Auto-complete"
+              }
+            ],
+            "text": "Auto-complete"
+          }
+        }
+      ],
+      "linkId": "medication name org",
+      "text": "약 이름 (원본)",
+      "type": "choice",
+      "answerValueSet": "https://clinicaltables.nlm.nih.gov/fhir/R4/ValueSet/rxterms"
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/terminology-server",
+          "valueUrl": "https://hapi.fhir.org/baseR4"
+        },
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+          "valueCodeableConcept": {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/questionnaire-item-control",
+                "code": "autocomplete",
+                "display": "Auto-complete"
+              }
+            ],
+            "text": "Auto-complete"
+          }
+        }
+      ],
+      "linkId": "medication name test",
+      "text": "약 이름 (Hapi fhir)",
+      "type": "choice",
+      "answerValueSet": "40610"
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/terminology-server",
+          "valueUrl": "https://browser.ihtsdotools.org/fhir"
+        },
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+          "valueCodeableConcept": {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/questionnaire-item-control",
+                "code": "autocomplete",
+                "display": "Auto-complete"
+              }
+            ],
+            "text": "Auto-complete"
+          }
+        }
+      ],
+      "linkId": "medication name test",
+      "text": "약 이름 (Test)",
+      "type": "choice",
+      "answerValueSet": "http://snomed.info/sct?fhir_vs=ecl/<<709492005",
+      "answerOption": [
+        {
+          "valueCoding": {
+            "code": "H",
+            "display": "HTN"
+          }
+        },
+        {
+          "valueCoding": {
+            "code": "D",
+            "display": "DM"
+          }
+        },
+        {
+          "valueCoding": {
+            "code": "CH",
+            "display": "Cerebral hemorrhage"
+          }
+        },
+        {
+          "valueCoding": {
+            "code": "CI",
+            "display": "Cerebral infarction"
+          }
+        }
+      ]
+    }
+  ]
+}
