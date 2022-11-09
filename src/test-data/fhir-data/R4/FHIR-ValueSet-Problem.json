@@ -1,0 +1,50 @@
+{
+  "resourceType": "ValueSet",
+  "id": "454",
+  "name": "Bumin Inquiry ValueSet: Problem",
+  "publisher": "Bumin Hospital",
+  "description": "To make inquiry & initial chart",
+  "url": "http://14.32.42.32:8081/fhir/ValueSet/454",
+  "identifier": [
+    {
+      "system": "http://hapi.fhir.org/UWearMe/identifiers/valuesets",
+      "value": "PatientTaxSituation"
+    }
+  ],
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "concept": [
+          { "system": "http://snomed.info/sct", "code": ",38341003", "display": "Hypertensive disorder, systemic arterial (disorder)", "designation" : [{"language" : "ko","use" : {"system" : "http://terminology.hl7.org/CodeSystem/designation-usage","code" : "display"},"value" : "고혈압"}]},
+          { "system": "http://snomed.info/sct", "code": ",10725009", "display": "Benign hypertension (disorder)", "designation" : [{"language" : "ko","use" : {"system" : "http://terminology.hl7.org/CodeSystem/designation-usage","code" : "display"},"value" : "양성고혈압"}]},
+          { "system": "http://snomed.info/sct", "code": ",73211009", "display": "Diabetes mellitus (disorder)", "designation" : [{"language" : "ko","use" : {"system" : "http://terminology.hl7.org/CodeSystem/designation-usage","code" : "display"},"value" : "당뇨"}]},
+          { "system": "http://snomed.info/sct", "code": ",44054006", "display": "Diabetes mellitus type 2 (disorder)", "designation" : [{"language" : "ko","use" : {"system" : "http://terminology.hl7.org/CodeSystem/designation-usage","code" : "display"},"value" : "2형당뇨"}]},
+          { "system": "http://snomed.info/sct", "code": ",370992007", "display": "Dyslipidemia (disorder)", "designation" : [{"language" : "ko","use" : {"system" : "http://terminology.hl7.org/CodeSystem/designation-usage","code" : "display"},"value" : "이상지질혈증"}]},
+          { "system": "http://snomed.info/sct", "code": ",66071002", "display": "Viral hepatitis type B (disorder)", "designation" : [{"language" : "ko","use" : {"system" : "http://terminology.hl7.org/CodeSystem/designation-usage","code" : "display"},"value" : "B형 간염"}]},
+          { "system": "http://snomed.info/sct", "code": ",56717001", "display": "Tuberculosis (disorder)", "designation" : [{"language" : "ko","use" : {"system" : "http://terminology.hl7.org/CodeSystem/designation-usage","code" : "display"},"value" : "결핵"}]},
+          { "system": "http://snomed.info/sct", "code": ",63739005", "display": "Coronary occlusion (disorder)", "designation" : [{"language" : "ko","use" : {"system" : "http://terminology.hl7.org/CodeSystem/designation-usage","code" : "display"},"value" : "관상동맥질환"}]},
+          { "system": "http://snomed.info/sct", "code": ",698247007", "display": "Cardiac arrhythmia (disorder)", "designation" : [{"language" : "ko","use" : {"system" : "http://terminology.hl7.org/CodeSystem/designation-usage","code" : "display"},"value" : "부정맥"}]},
+          { "system": "http://snomed.info/sct", "code": ",49436004", "display": "Atrial fibrillation (disorder)", "designation" : [{"language" : "ko","use" : {"system" : "http://terminology.hl7.org/CodeSystem/designation-usage","code" : "display"},"value" : "심방세동"}]},
+          { "system": "http://snomed.info/sct", "code": ",13645005", "display": "Chronic obstructive lung disease (disorder)", "designation" : [{"language" : "ko","use" : {"system" : "http://terminology.hl7.org/CodeSystem/designation-usage","code" : "display"},"value" : "만성폐쇄성폐질환"}]},
+          { "system": "http://snomed.info/sct", "code": ",195967001", "display": "Asthma (disorder)", "designation" : [{"language" : "ko","use" : {"system" : "http://terminology.hl7.org/CodeSystem/designation-usage","code" : "display"},"value" : "천식"}]},
+          { "system": "http://snomed.info/sct", "code": ",86094006", "display": "Chronic rhinitis (disorder)", "designation" : [{"language" : "ko","use" : {"system" : "http://terminology.hl7.org/CodeSystem/designation-usage","code" : "display"},"value" : "만성비염"}]},
+          { "system": "http://snomed.info/sct", "code": ",90708001", "display": "Kidney disease (disorder)", "designation" : [{"language" : "ko","use" : {"system" : "http://terminology.hl7.org/CodeSystem/designation-usage","code" : "display"},"value" : "신장질환"}]},
+          { "system": "http://snomed.info/sct", "code": ",265764009", "display": "Renal dialysis (procedure)", "designation" : [{"language" : "ko","use" : {"system" : "http://terminology.hl7.org/CodeSystem/designation-usage","code" : "display"},"value" : "투석"}]},
+          { "system": "http://snomed.info/sct", "code": ",128606002", "display": "Disorder of the urinary system (disorder)", "designation" : [{"language" : "ko","use" : {"system" : "http://terminology.hl7.org/CodeSystem/designation-usage","code" : "display"},"value" : "비뇨기계질환"}]},
+          { "system": "http://snomed.info/sct", "code": ",313413008", "display": "Calculus finding (finding)", "designation" : [{"language" : "ko","use" : {"system" : "http://terminology.hl7.org/CodeSystem/designation-usage","code" : "display"},"value" : "결석질환"}]},
+          { "system": "http://snomed.info/sct", "code": ",362969004", "display": "Disorder of endocrine system (disorder)", "designation" : [{"language" : "ko","use" : {"system" : "http://terminology.hl7.org/CodeSystem/designation-usage","code" : "display"},"value" : "내분비계질환"}]},
+          { "system": "http://snomed.info/sct", "code": ",14304000", "display": "Disorder of thyroid gland (disorder)", "designation" : [{"language" : "ko","use" : {"system" : "http://terminology.hl7.org/CodeSystem/designation-usage","code" : "display"},"value" : "갑상선질환"}]},
+          { "system": "http://snomed.info/sct", "code": ",396275006", "display": "Osteoarthritis (disorder)", "designation" : [{"language" : "ko","use" : {"system" : "http://terminology.hl7.org/CodeSystem/designation-usage","code" : "display"},"value" : "골관절염"}]},
+          { "system": "http://snomed.info/sct", "code": ",323301000119109", "display": "Osteoarthritis of left knee joint (disorder)", "designation" : [{"language" : "ko","use" : {"system" : "http://terminology.hl7.org/CodeSystem/designation-usage","code" : "display"},"value" : "왼쪽무릎관절염"}]},
+          { "system": "http://snomed.info/sct", "code": ",323321000119100", "display": "Osteoarthritis of right knee joint (disorder)", "designation" : [{"language" : "ko","use" : {"system" : "http://terminology.hl7.org/CodeSystem/designation-usage","code" : "display"},"value" : "오른쪽무릎관절염"}]},
+          { "system": "http://snomed.info/sct", "code": ",64859006", "display": "Osteoporosis (disorder)", "designation" : [{"language" : "ko","use" : {"system" : "http://terminology.hl7.org/CodeSystem/designation-usage","code" : "display"},"value" : "골다공증"}]},
+          { "system": "http://snomed.info/sct", "code": ",312894000", "display": "Osteopenia (disorder)", "designation" : [{"language" : "ko","use" : {"system" : "http://terminology.hl7.org/CodeSystem/designation-usage","code" : "display"},"value" : "골감소증"}]},
+          { "system": "http://snomed.info/sct", "code": ",68496003", "display": "Polyp of colon (disorder)", "designation" : [{"language" : "ko","use" : {"system" : "http://terminology.hl7.org/CodeSystem/designation-usage","code" : "display"},"value" : "대장용종"}]},
+          { "system": "http://snomed.info/sct", "code": ",363346000", "display": "Malignant neoplastic disease (disorder)", "designation" : [{"language" : "ko","use" : {"system" : "http://terminology.hl7.org/CodeSystem/designation-usage","code" : "display"},"value" : "악성종양"}]}
+        ]
+      }
+    ]
+  }
+}
+
