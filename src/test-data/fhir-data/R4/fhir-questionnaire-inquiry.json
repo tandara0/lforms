@@ -300,9 +300,21 @@
       "type": "group",
       "item": [
         {
-          "linkId": "Onset",
-          "text": "언제부터 시작되었나요?",
-          "type": "dateTime",
+          "linkId": "Onset Date",
+          "text": "언제부터 시작되었나요 (날짜)?",
+          "type": "date",
+          "code": [
+            {
+              "system": "http://loinc.org",
+              "code": "76425-8",
+              "display": "Date of onset - Reported"
+            }
+          ]
+        },
+        {
+          "linkId": "Onset Time",
+          "text": "언제부터 시작되었나요 (시간)?",
+          "type": "time",
           "code": [
             {
               "system": "http://loinc.org",
