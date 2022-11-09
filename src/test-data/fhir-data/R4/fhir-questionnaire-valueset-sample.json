@@ -32,7 +32,7 @@
       "extension": [
         {
           "url": "http://hl7.org/fhir/StructureDefinition/terminology-server",
-          "valueUrl": "https://hapi.fhir.org/baseR4"
+          "valueUrl": "http://14.32.42.32:8081/fhir"
         },
         {
           "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
@@ -49,9 +49,9 @@
         }
       ],
       "linkId": "medication name test",
-      "text": "약 이름 (Hapi fhir)",
+      "text": "현병력 (Hapi fhir)",
       "type": "choice",
-      "answerValueSet": "40610"
+      "answerValueSet": "454"
     },
     {
       "extension": [
@@ -76,33 +76,7 @@
       "linkId": "medication name test",
       "text": "약 이름 (Test)",
       "type": "choice",
-      "answerValueSet": "http://snomed.info/sct?fhir_vs=ecl/<<709492005",
-      "answerOption": [
-        {
-          "valueCoding": {
-            "code": "H",
-            "display": "HTN"
-          }
-        },
-        {
-          "valueCoding": {
-            "code": "D",
-            "display": "DM"
-          }
-        },
-        {
-          "valueCoding": {
-            "code": "CH",
-            "display": "Cerebral hemorrhage"
-          }
-        },
-        {
-          "valueCoding": {
-            "code": "CI",
-            "display": "Cerebral infarction"
-          }
-        }
-      ]
+      "answerValueSet": "http://snomed.info/sct?fhir_vs=ecl/<<709492005"
     }
   ]
 }
