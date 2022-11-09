@@ -658,66 +658,32 @@
             }
           ],
           "answerOption": [
-            {
-              "valueCoding": {
-                "code": "38341003",
-                "display": "고혈압"
-              }
-            },
-            {
-              "valueCoding": {
-                "code": "10725009",
-                "display": "양성고혈압"
-              }
-            },
-            {
-              "valueCoding": {
-                "code": "73211009",
-                "display": "당뇨"
-              }
-            },
-            {
-              "valueCoding": {
-                "code": "44054006",
-                "display": "2형당뇨"
-              }
-            },
-            {
-              "valueCoding": {
-                "code": "370992007",
-                "display": "이상지질혈증"
-              }
-            },
-            {
-              "valueCoding": {
-                "code": "66071002",
-                "display": "B형 간염"
-              }
-            },
-            {
-              "valueCoding": {
-                "code": "56717001",
-                "display": "결핵"
-              }
-            },
-            {
-              "valueCoding": {
-                "code": "63739005",
-                "display": "관상동맥질환"
-              }
-            },
-            {
-              "valueCoding": {
-                "code": "698247007",
-                "display": "부정맥"
-              }
-            },
-            {
-              "valueCoding": {
-                "code": "49436004",
-                "display": "심방세동"
-              }
-            }
+            { "valueCoding": {"code": "38341003","display": "고혈압"}},
+            { "valueCoding": {"code": "10725009","display": "양성고혈압"}},
+            { "valueCoding": {"code": "73211009","display": "당뇨"}},
+            { "valueCoding": {"code": "44054006","display": "2형당뇨"}},
+            { "valueCoding": {"code": "370992007","display": "이상지질혈증"}},
+            { "valueCoding": {"code": "66071002","display": "B형 간염"}},
+            { "valueCoding": {"code": "56717001","display": "결핵"}},
+            { "valueCoding": {"code": "63739005","display": "관상동맥질환"}},
+            { "valueCoding": {"code": "698247007","display": "부정맥"}},
+            { "valueCoding": {"code": "49436004","display": "심방세동"}},
+            { "valueCoding": {"code": "13645005","display": "만성폐쇄성폐질환"}},
+            { "valueCoding": {"code": "195967001","display": "천식"}},
+            { "valueCoding": {"code": "86094006","display": "만성비염"}},
+            { "valueCoding": {"code": "90708001","display": "신장질환"}},
+            { "valueCoding": {"code": "265764009","display": "투석"}},
+            { "valueCoding": {"code": "128606002","display": "비뇨기계질환"}},
+            { "valueCoding": {"code": "313413008","display": "결석질환"}},
+            { "valueCoding": {"code": "362969004","display": "내분비계질환"}},
+            { "valueCoding": {"code": "14304000","display": "갑상선질환"}},
+            { "valueCoding": {"code": "396275006","display": "골관절염"}},
+            { "valueCoding": {"code": "323301000119109","display": "왼쪽무릎관절염"}},
+            { "valueCoding": {"code": "323321000119100","display": "오른쪽무릎관절염"}},
+            { "valueCoding": {"code": "64859006","display": "골다공증"}},
+            { "valueCoding": {"code": "312894000","display": "골감소증"}},
+            { "valueCoding": {"code": "68496003","display": "대장용종"}},
+            { "valueCoding": {"code": "363346000","display": "악성종양"}}
           ]
         },
         {
@@ -759,56 +725,33 @@
               "display": "Medical history [RHEA]"
             }
           ],
-          "repeats": true,
           "answerOption": [
-            {
-              "valueCoding": {
-                "code": "None",
-                "display": "없음"
-              }
-            },
-            {
-              "valueCoding": {
-                "code": "266995000",
-                "display": "심혈관계질환"
-              }
-            },
-            {
-              "valueCoding": {
-                "code": "275544003",
-                "display": "심장질환"
-              }
-            },
-            {
-              "valueCoding": {
-                "code": "399211009",
-                "display": "심근경색"
-              }
-            },
-            {
-              "valueCoding": {
-                "code": "131471000119104",
-                "display": "부정맥"
-              }
-            },
-            {
-              "valueCoding": {
-                "code": "275540007",
-                "display": "뇌질환"
-              }
-            },
-            {
-              "valueCoding": {
-                "code": "428267002",
-                "display": "뇌출혈"
-              }
-            },
-            {
-              "valueCoding": {
-                "code": "431310008",
-                "display": "뇌경색"
-              }
-            }
+            { "valueCoding": {"code": "266995000","display": "심혈관계질환"}},
+            { "valueCoding": {"code": "275544003","display": "심장질환"}},
+            { "valueCoding": {"code": "399211009","display": "심근경색"}},
+            { "valueCoding": {"code": "131471000119104","display": "부정맥"}},
+            { "valueCoding": {"code": "275540007","display": "뇌질환"}},
+            { "valueCoding": {"code": "428267002","display": "뇌출혈"}},
+            { "valueCoding": {"code": "431310008","display": "뇌경색"}},
+            { "valueCoding": {"code": "161523006","display": "호흡계질환"}},
+            { "valueCoding": {"code": "266997008","display": "소회기계질환"}},
+            { "valueCoding": {"code": "275552000","display": "신장질환"}},
+            { "valueCoding": {"code": "429025008","display": "신장결석"}},
+            { "valueCoding": {"code": "267002001","display": "비뇨기계질환"}},
+            { "valueCoding": {"code": "161548009","display": "요결석"}},
+            { "valueCoding": {"code": "161554005","display": "남성생식기계질환"}},
+            { "valueCoding": {"code": "161556007","display": "남성불임"}},
+            { "valueCoding": {"code": "271902005","display": "여성생식기계질환"}},
+            { "valueCoding": {"code": "161798008","display": "여성불임"}},
+            { "valueCoding": {"code": "266990005","display": "내분비계질환"}},
+            { "valueCoding": {"code": "90560007","display": "통풍"}},
+            { "valueCoding": {"code": "69896004","display": "류마티스관절염"}},
+            { "valueCoding": {"code": "161568003","display": "골관절염"}},
+            { "valueCoding": {"code": "473120007","display": "골다공증"}},
+            { "valueCoding": {"code": "473442002","display": "골감소증"}},
+            { "valueCoding": {"code": "428283002","display": "대장용종"}},
+            { "valueCoding": {"code": "266987004","display": "악성종양"}},
+            { "valueCoding": {"code": "None","display": "없음"}}
           ]
         },
         {
@@ -850,38 +793,31 @@
               "display": "Medical history [RHEA]"
             }
           ],
-          "repeats": true,
           "answerOption": [
-            {
-              "valueCoding": {
-                "code": "428449006",
-                "display": "뇌수술"
-              }
-            },
-            {
-              "valueCoding": {
-                "code": "428661006",
-                "display": "뇌동맥루수슬"
-              }
-            },
-            {
-              "valueCoding": {
-                "code": "429074009",
-                "display": "심혈관계 처치 및 수술"
-              }
-            },
-            {
-              "valueCoding": {
-                "code": "161624007",
-                "display": "폐절제술"
-              }
-            },
-            {
-              "valueCoding": {
-                "code": "10997971000119103",
-                "display": "폐엽절제술"
-              }
-            }
+            { "valueCoding": {"code": "428449006","display": "뇌수술"}},
+            { "valueCoding": {"code": "428661006","display": "뇌동맥루수슬"}},
+            { "valueCoding": {"code": "429074009","display": "심혈관계 처치 및 수술"}},
+            { "valueCoding": {"code": "161624007","display": "폐절제술"}},
+            { "valueCoding": {"code": "10997971000119103","display": "폐엽절제술"}},
+            { "valueCoding": {"code": "111981000119100","display": "췌장절제술"}},
+            { "valueCoding": {"code": "427817003","display": "위절제슬"}},
+            { "valueCoding": {"code": "429281008","display": "간절제술"}},
+            { "valueCoding": {"code": "161671001","display": "간이식수술"}},
+            { "valueCoding": {"code": "161626009","display": "비장절제술"}},
+            { "valueCoding": {"code": "428882003","display": "담낭절제술"}},
+            { "valueCoding": {"code": "428251008","display": "충수돌기절제술"}},
+            { "valueCoding": {"code": "61531000119104","display": "신장절제술"}},
+            { "valueCoding": {"code": "161665007","display": "신장이식수술"}},
+            { "valueCoding": {"code": "428892006","display": "갑상선제거술"}},
+            { "valueCoding": {"code": "71661000210109","display": "유방수술"}},
+            { "valueCoding": {"code": "161619009","display": "척추수술"}},
+            { "valueCoding": {"code": "721901009","display": "근골격계수술"}},
+            { "valueCoding": {"code": "1211000119105","display": "무릎관절수술"}},
+            { "valueCoding": {"code": "698453009","display": "엉덩이뼈관절수술"}},
+            { "valueCoding": {"code": "161800001","display": "자궁절제술"}},
+            { "valueCoding": {"code": "391083006","display": "양측난소절제술"}},
+            { "valueCoding": {"code": "427851004","display": "양측난관난소절제술"}},
+            { "valueCoding": {"code": "429763009","display": "전자궁절제술 & 양쪽난관난소절제술"}}
           ]
         },
         {
@@ -904,54 +840,23 @@
       ],
       "repeats": true,
       "answerOption": [
-        {
-          "valueCoding": {
-            "code": "61582004",
-            "display": "알레르기비염"
-          }
-        },
-        {
-          "valueCoding": {
-            "code": "24079001",
-            "display": "아토피피부염"
-          }
-        },
-        {
-          "valueCoding": {
-            "code": "473460002",
-            "display": "알레르기결막염"
-          }
-        },
-        {
-          "valueCoding": {
-            "code": "40275004",
-            "display": "접촉성피부염"
-          }
-        },
-        {
-          "valueCoding": {
-            "code": "419199007",
-            "display": "물질알레르기"
-          }
-        },
-        {
-          "valueCoding": {
-            "code": "414285001",
-            "display": "식품알레르기"
-          }
-        },
-        {
-          "valueCoding": {
-            "code": "782555009",
-            "display": "우유알레르기"
-          }
-        },
-        {
-          "valueCoding": {
-            "code": "91935009",
-            "display": "땅콩알레르기"
-          }
-        }
+        { "valueCoding": {"code": "61582004","display": "알레르기비염"}},
+        { "valueCoding": {"code": "24079001","display": "아토피피부염"}},
+        { "valueCoding": {"code": "473460002","display": "알레르기결막염"}},
+        { "valueCoding": {"code": "40275004","display": "접촉성피부염"}},
+        { "valueCoding": {"code": "419199007","display": "물질알레르기"}},
+        { "valueCoding": {"code": "414285001","display": "식품알레르기"}},
+        { "valueCoding": {"code": "782555009","display": "우유알레르기"}},
+        { "valueCoding": {"code": "91935009","display": "땅콩알레르기"}},
+        { "valueCoding": {"code": "416098002","display": "약품알레르기"}},
+        { "valueCoding": {"code": "293586001","display": "아스피린알레르기"}},
+        { "valueCoding": {"code": "91936005","display": "페니시린알레르기"}},
+        { "valueCoding": {"code": "429239002","display": "설파제 알레르기"}},
+        { "valueCoding": {"code": "717234006","display": "동물알레르기"}},
+        { "valueCoding": {"code": "300910009","display": "꽃가루알레르기"}},
+        { "valueCoding": {"code": "419474003","display": "곰팡이알레르기"}},
+        { "valueCoding": {"code": "390952000","display": "먼지알레르기"}},
+        { "valueCoding": {"code": "1155942004","display": "금속알레르기"}}
       ]
     },
     {
