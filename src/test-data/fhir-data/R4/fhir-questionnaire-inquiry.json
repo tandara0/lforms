@@ -1436,8 +1436,8 @@
           }
         }
       ],
-      "linkId": "medication",
-      "text": "복용약",
+      "linkId": "medication - search",
+      "text": "복용약 (검색)",
       "type": "group",
       "repeats": true,
       "item": [
@@ -1479,34 +1479,115 @@
       ]
     },
     {
-      "linkId": "family",
-      "text": "가족력",
-      "type": "choice",
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+          "valueCodeableConcept": {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/questionnaire-item-control",
+                "code": "gtable",
+                "display": "Group Table"
+              }
+            ],
+            "text": "Group Table"
+          }
+        }
+      ],
+      "linkId": "medication - select",
+      "text": "복용약 (선택)",
+      "type": "group",
       "repeats": true,
-      "answerOption": [
+      "item": [
         {
-          "valueCoding": {
-            "code": "H",
-            "display": "HTN"
-          }
+          "linkId": "medication name (select)",
+          "text": "약 이름",
+          "type": "choice",
+          "answerOption": [
+            { "valueCoding": {"code": "1182007","display": "혈압약"}},
+            { "valueCoding": {"code": "384953001","display": "당뇨약"}},
+            { "valueCoding": {"code": "373267003","display": "이상지질혈증약"}},
+            { "valueCoding": {"code": "255631004","display": "항생제"}},
+            { "valueCoding": {"code": "788081006","display": "항바이러스제"}},
+            { "valueCoding": {"code": "788023007","display": "항진균제"}},
+            { "valueCoding": {"code": "53009005","display": "진통제"}},
+            { "valueCoding": {"code": "360253007","display": "천식약"}},
+            { "valueCoding": {"code": "10784006","display": "정신과약"}},
+            { "valueCoding": {"code": "255635008","display": "항불안제"}},
+            { "valueCoding": {"code": "36236003","display": "항우울제"}},
+            { "valueCoding": {"code": "58050004","display": "항파킨슨제재"}},
+            { "valueCoding": {"code": "303960004","display": "항혈전제 (항혈소판제와 항응고제)"}},
+            { "valueCoding": {"code": "22091006","display": "호르몬제"}},
+            { "valueCoding": {"code": "69431002","display": "면역억제제"}},
+            { "valueCoding": {"code": "27867009","display": "항암제"}},
+            { "valueCoding": {"code": "395114000","display": "한약"}
+            }
+          ]
         },
         {
-          "valueCoding": {
-            "code": "D",
-            "display": "DM"
-          }
+          "linkId": "medication strength (select)",
+          "text": "투약량",
+          "type": "decimal"
         },
         {
-          "valueCoding": {
-            "code": "CH",
-            "display": "Cerebral hemorrhage"
+          "linkId": "medication unit (select)",
+          "text": "단위",
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+          "valueCodeableConcept": {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/questionnaire-item-control",
+                "code": "gtable",
+                "display": "Group Table"
+              }
+            ],
+            "text": "Group Table"
           }
+        }
+      ],
+      "linkId": "family - select",
+      "text": "가족력 (선택)",
+      "type": "group",
+      "repeats": true,
+      "item": [
+        {
+          "linkId": "family relation (select)",
+          "text": "관계",
+          "type": "choice",
+          "answerOption": [
+            { "valueCoding": {"code": "34871008","display": "할아버지"}},
+            { "valueCoding": {"code": "113157001","display": "할머니"}},
+            { "valueCoding": {"code": "394857004","display": "외할아버지"}},
+            { "valueCoding": {"code": "394859001","display": "외할머니"}},
+            { "valueCoding": {"code": "66839005","display": "아버지"}},
+            { "valueCoding": {"code": "72705000","display": "어머니"}},
+            { "valueCoding": {"code": "442041000124107","display": "아버지의 남자형제"}},
+            { "valueCoding": {"code": "736455007","display": "아버지의 여자형제"}},
+            { "valueCoding": {"code": "442031000124102","display": "어머니의 남자형제"}},
+            { "valueCoding": {"code": "736454006","display": "어머니의 여자형제"}},
+            { "valueCoding": {"code": "75005","display": "형제"}}
+          ]
         },
         {
-          "valueCoding": {
-            "code": "CI",
-            "display": "Cerebral infarction"
-          }
+          "linkId": "family condition (select)",
+          "text": "병/증상 명",
+          "type": "choice",
+          "answerOption": [
+            { "valueCoding": {"code": "160357008","display": "고혈압"}},
+            { "valueCoding": {"code": "160303001","display": "당뇨"}},
+            { "valueCoding": {"code": "275104002","display": "뇌졸중"}},
+            { "valueCoding": {"code": "429961000","display": "치매"}},
+            { "valueCoding": {"code": "725117008","display": "고지혈증"}},
+            { "valueCoding": {"code": "275937001","display": "악성종양"}},
+            { "valueCoding": {"code": "160417009","display": "유전질환"}}
+          ]
         }
       ]
     },
