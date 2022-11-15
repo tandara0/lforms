@@ -49,7 +49,7 @@
         }
       ],
       "linkId": "medication name test",
-      "text": "현병력 (Hapi fhir)",
+      "text": "현병력 (Local Hapi fhir)",
       "type": "choice",
       "answerValueSet": "454"
     },
@@ -74,7 +74,7 @@
         }
       ],
       "linkId": "medication name test",
-      "text": "약 이름 (Test)",
+      "text": "약 이름 (Snomed CT Official Test)",
       "type": "choice",
       "answerValueSet": "http://snomed.info/sct?fhir_vs=ecl/<<709492005"
     }

@@ -1,15 +1,9 @@
 {
   "resourceType": "Questionnaire",
-  "id": "5770417",
-  "meta": {
-    "versionId": "2",
-    "lastUpdated": "2022-10-31T04:32:24.000-04:00",
-    "source": "#08rWN0zTjQqpqqIH"
-  },
   "text": {
     "status": "generated"
   },
-  "url": "http://hl7.org/fhir/Questionnaire/0815",
+  "url": "http://hl7.org/fhir/Questionnaire/353",
   "title": "Bumin Inquiry for PoC",
   "status": "draft",
   "subjectType": [
@@ -223,12 +217,6 @@
       ]
     },
     {
-      "extension": [
-        {
-          "url": "http://hl7.org/fhir/StructureDefinition/terminology-server",
-          "valueUrl": "https://clinicaltables.nlm.nih.gov/fhir/R4"
-        }
-      ],
       "linkId": "Chief complaint",
       "text": "주증상",
       "type": "group",
@@ -243,6 +231,10 @@
         {
           "extension": [
             {
+              "url": "http://hl7.org/fhir/StructureDefinition/terminology-server",
+              "valueUrl": "http://14.32.42.32:8081/fhir"
+            },
+            {
               "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
               "valueCodeableConcept": {
                 "coding": [
@@ -256,41 +248,10 @@
               }
             }
           ],
-          "linkId": "Chief complaint Name",
+          "linkId": "CC Name",
           "text": "증상명",
-          "type": "open-choice",
-          "answerOption": [
-            {
-              "valueCoding": {
-                "code": "404640003",
-                "display": "어지러움"
-              }
-            },
-            {
-              "valueCoding": {
-                "code": "49727002",
-                "display": "기침"
-              }
-            },
-            {
-              "valueCoding": {
-                "code": "64531003",
-                "display": "콧물"
-              }
-            },
-            {
-              "valueCoding": {
-                "code": "21522001",
-                "display": "복통"
-              }
-            },
-            {
-              "valueCoding": {
-                "code": "300359004",
-                "display": "구토"
-              }
-            }
-          ]
+          "type": "choice",
+          "answerValueSet": "490"
         }
       ]
     },
@@ -299,6 +260,18 @@
       "text": "공통질문",
       "type": "group",
       "item": [
+        {
+          "linkId": "Onset Year",
+          "text": "언제부터 시작되었나요 (연도)?",
+          "type": "integer",
+          "code": [
+            {
+              "system": "http://loinc.org",
+              "code": "76425-8",
+              "display": "Date of onset - Reported"
+            }
+          ]
+        },
         {
           "linkId": "Onset Date",
           "text": "언제부터 시작되었나요 (날짜)?",
@@ -1499,8 +1472,59 @@
     {
       "linkId": "review of system",
       "text": "계통문진",
-      "type": "string",
-      "enableBehavior": "all"
+      "type": "group",
+      "item": [
+        {
+          "text": "피부",
+          "linkId": "DERMA",
+          "type": "choice",
+          "code": "364528001",
+          "repeats": true,
+          "answerOption": [
+            { "valueCoding": {"code": "418363000","display": "가려움"}},
+            { "valueCoding": {"code": "271807003","display": "피부에 뭐가 남"}},
+            { "valueCoding": {"code": "225549006","display": "피부가 노랗게 보임"}}
+          ],
+          "enableWhen": [
+            {"question": "CC Name","operator": "=","answerCoding": {"code": "52475004"}},
+            {"question": "CC Name","operator": "=","answerCoding": {"code": "297957009"}}
+          ],
+          "enableBehavior": "any"
+        },
+        {
+          "text": "머리",
+          "linkId": "NEURO(NR)",
+          "type": "choice",
+          "code": "364404000",
+          "repeats": true,
+          "answerOption": [
+            { "valueCoding": {"code": "25064002","display": "머리 아픔"}},
+            { "valueCoding": {"code": "404640003","display": "어지러움"}}
+          ],
+          "enableWhen": [
+            {"question": "CC Name","operator": "=","answerCoding": {"code": "404640003"}},
+            {"question": "CC Name","operator": "=","answerCoding": {"code": "71642004"}}
+          ],
+          "enableBehavior": "any"
+        },
+        {
+          "text": "눈",
+          "linkId": "OPT",
+          "type": "choice",
+          "code": "E414174009",
+          "repeats": true,
+          "answerOption": [
+            { "valueCoding": {"code": "24982008","display": "물체가 두개로 보임"}},
+            { "valueCoding": {"code": "63102001","display": "시야가 이상함"}}
+          ],
+          "enableWhen": [
+            {"question": "CC Name","operator": "=","answerCoding": {"code": "225581002"}},
+            {"question": "CC Name","operator": "=","answerCoding": {"code": "781682005"}},
+            {"question": "CC Name","operator": "=","answerCoding": {"code": "193982009"}}
+          ],
+          "enableBehavior": "any"
+        }
+      ]
     }
   ]
 }
