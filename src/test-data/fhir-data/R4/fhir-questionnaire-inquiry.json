@@ -1352,7 +1352,17 @@
           ],
           "linkId": "medication strength",
           "text": "투약량",
-          "type": "open-choice"
+          "type": "choice"
+        },
+        {
+          "linkId": "medication count",
+          "text": "일 투여횟수",
+          "type": "integer"
+        },
+        {
+          "linkId": "medication duration",
+          "text": "투여기간 (일)",
+          "type": "integer"
         }
       ]
     },
@@ -1405,12 +1415,17 @@
         {
           "linkId": "medication strength (select)",
           "text": "투약량",
-          "type": "decimal"
+          "type": "string"
         },
         {
-          "linkId": "medication unit (select)",
-          "text": "단위",
-          "type": "string"
+          "linkId": "medication count (select)",
+          "text": "일 투여횟수",
+          "type": "integer"
+        },
+        {
+          "linkId": "medication duration (select)",
+          "text": "투여기간 (일)",
+          "type": "integer"
         }
       ]
     },
