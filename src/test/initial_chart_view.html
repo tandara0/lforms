@@ -61,7 +61,7 @@
       <h1 class="panel-heading">(의사용) 초진차트 보기</h1>
       <br>
 
-      <p>이름: <span class="tab"></span>   <input type="text" id="patientName" name="patientName" value="Peter" required minlength="4" maxlength="20" size="10"></p>
+      <p>이름: <span class="tab"></span>   <input type="text" id="patientName" name="patientName" value="PeterTest" required minlength="4" maxlength="20" size="10"></p>
       <p>생년월일:  <input type="date" id="patientBirth" name="patientBirth" value = "1974-12-25" required minlength="4" maxlength="8" size="10"></p>
       <p>성별: <span class="tab"></span>
         <select name="patientSex">
@@ -73,14 +73,18 @@
       <br>
 
       <div class="panel-body">
-        <button id="test2" class="btn btn-primary" onclick="getQuestionnaireResponse()">답변보기</button>
+        <button id="test" class="btn btn-primary" onclick="getInitialChart()">초진차트로 가져오기</button>
+      </div>
+      <div id="initialChartForm"></div>
+
+      <br>
+
+      <div class="panel-body">
+        <button id="test2" class="btn btn-primary" onclick="checkPatientAnswer()">환자 답변 검토</button>
       </div>
       <div id="questionnaireResponseForm"></div>
 
-      <div class="panel-body">
-        <button id="test" class="btn btn-primary" onclick="getInitialChart()">초진차트 생성</button>
-      </div>
-      <div id="initialChartForm"></div>
+      <button id="test3" class="btn btn-primary" onclick="sendQuestionnaireResponse()">수정 사항 저장</button>
 
       <br>
       <br>
@@ -108,15 +112,12 @@
       const host = "http://localhost:8083/"
       const myInquiryID = 1010
 
-      function getQuestionnaireResponse() {
-        getInquiry(host, myInquiryID)
-      }
 
       function getInitialChart() {
-        commonGet(showInitialChart)
+        getInquiry(showInitialChart)
       }
 
-      function commonGet(doAfter) {
+      function getInquiry(doAfter) {
         // http://14.32.42.32:8083/api/inquiry/initial-chart?patientName=Peter&birthDate=1974-12-25
         let patientName = document.getElementById("patientName").value;
         if (patientName === '') {
@@ -151,28 +152,70 @@
         });
       }
 
-
-      let gQuestionnaire = null;
-
       function showInitialChart(questionnaireResponse) {
         console.log(questionnaireResponse.text.div)
         document.getElementById("initialChartForm").innerHTML = questionnaireResponse.text.div
       }
 
 
-      function getInquiry(host, myInquiryID) {
-        const hapiURL = `${host}api/inquiry?inquiryID=${myInquiryID}`;
-        getFromHapiFhir(hapiURL, (questionnaire) => {gQuestionnaire = questionnaire;});
-        commonGet(showQuestionnaireResponse);
+
+
+
+      let gQuestionnaire = null;
+      let gQuestionnaireResponse = null;
+
+      function checkPatientAnswer() {
+        getQuestionnaireForm((questionnaire) => {
+          gQuestionnaire = questionnaire;
+          getInquiry(showAsQuestionnaireForm);
+        });
       }
 
-      function showQuestionnaireResponse(questionnaireResponse) {
-        const questionnaireForm = LForms.Util.convertFHIRQuestionnaireToLForms(gQuestionnaire, getFHIRVersion());
-        const merged = LForms.Util.mergeFHIRDataIntoLForms("QuestionnaireResponse", questionnaireResponse, questionnaireForm, getFHIRVersion())
+      function getQuestionnaireForm(doAfter) {
+        const hapiURL = `${host}api/inquiry?inquiryID=${myInquiryID}`;
+        getFromHapiFhir(hapiURL, doAfter);
+      }
 
+
+      function showAsQuestionnaireForm(questionnaireResponse) {
+        gQuestionnaireResponse = questionnaireResponse;
+        const questionnaireForm = LForms.Util.convertFHIRQuestionnaireToLForms(gQuestionnaire, getFHIRVersion());
+        const merged = LForms.Util.mergeFHIRDataIntoLForms(
+          "QuestionnaireResponse", questionnaireResponse, questionnaireForm, getFHIRVersion())
         LForms.Util.addFormToPage(merged, 'questionnaireResponseForm');
       }
 
+
+      function sendQuestionnaireResponse() {
+        const qr = readQuestionnaireResponse();
+        const hapiURL = `${host}api/inquiry/answer?inquiryID=${myInquiryID}`;
+
+        putToHapiFhir(hapiURL, qr);
+      }
+
+      function readQuestionnaireResponse() {
+        const qr = LForms.Util.getFormFHIRData('QuestionnaireResponse', getFHIRVersion(),
+          'questionnaireResponseForm'); //, {extract: true} )
+        qr.id = gQuestionnaireResponse.id
+        return qr
+      }
+
+      function putToHapiFhir(hapiURL, data) {
+        fetch(hapiURL, {
+          method: "PUT",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(data),
+        })
+          .then(function(response)  {
+            if (response.ok) {
+              alert("변경에 성공했습니다.");
+            } else {
+              alert("실패했습니다 !!!");
+            }
+          });
+      }
 
     </script>
 
