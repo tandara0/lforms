@@ -1310,11 +1310,11 @@
           "valueExpression": {
             "name": "strengthFormLookup",
             "language": "application/x-fhir-query",
-            "expression": "https://clinicaltables.nlm.nih.gov/fhir/R4/CodeSystem/$lookup?system=https://clinicaltables.nlm.nih.gov/fhir/CodeSystem/rxterms&code={{item.where(linkId='medication name').answer.valueCoding.code}}&property=STRENGTHS_AND_FORMS"
+            "expression": "https://clinicaltables.nlm.nih.gov/fhir/R4/CodeSystem/$lookup?system=https://clinicaltables.nlm.nih.gov/fhir/CodeSystem/rxterms&code={{item.where(linkId='medication name/search').answer.valueCoding.code}}&property=STRENGTHS_AND_FORMS"
           }
         }
       ],
-      "linkId": "medication - search",
+      "linkId": "medication/search",
       "text": "복용약 (검색)",
       "type": "group",
       "repeats": true,
@@ -1335,7 +1335,7 @@
               }
             }
           ],
-          "linkId": "medication name",
+          "linkId": "medication name/search",
           "text": "약 이름",
           "type": "choice",
           "answerValueSet": "https://clinicaltables.nlm.nih.gov/fhir/R4/ValueSet/rxterms"
@@ -1350,17 +1350,17 @@
               }
             }
           ],
-          "linkId": "medication strength",
+          "linkId": "medication strength/search",
           "text": "투약량",
           "type": "choice"
         },
         {
-          "linkId": "medication count",
+          "linkId": "medication count/search",
           "text": "일 투여횟수",
           "type": "integer"
         },
         {
-          "linkId": "medication duration",
+          "linkId": "medication duration/search",
           "text": "투여기간 (일)",
           "type": "integer"
         }
@@ -1382,13 +1382,13 @@
           }
         }
       ],
-      "linkId": "medication - select",
+      "linkId": "medication/select",
       "text": "복용약 (선택)",
       "type": "group",
       "repeats": true,
       "item": [
         {
-          "linkId": "medication name (select)",
+          "linkId": "medication name/select",
           "text": "약 이름",
           "type": "choice",
           "answerOption": [
@@ -1413,17 +1413,17 @@
           ]
         },
         {
-          "linkId": "medication strength (select)",
+          "linkId": "medication strength/select",
           "text": "투약량",
           "type": "string"
         },
         {
-          "linkId": "medication count (select)",
+          "linkId": "medication count/select",
           "text": "일 투여횟수",
           "type": "integer"
         },
         {
-          "linkId": "medication duration (select)",
+          "linkId": "medication duration/select",
           "text": "투여기간 (일)",
           "type": "integer"
         }
@@ -1445,13 +1445,13 @@
           }
         }
       ],
-      "linkId": "family - select",
-      "text": "가족력 (선택)",
+      "linkId": "family",
+      "text": "가족력",
       "type": "group",
       "repeats": true,
       "item": [
         {
-          "linkId": "family relation (select)",
+          "linkId": "family relation",
           "text": "관계",
           "type": "choice",
           "answerOption": [
@@ -1469,7 +1469,7 @@
           ]
         },
         {
-          "linkId": "family condition (select)",
+          "linkId": "family condition",
           "text": "병/증상 명",
           "type": "choice",
           "answerOption": [
