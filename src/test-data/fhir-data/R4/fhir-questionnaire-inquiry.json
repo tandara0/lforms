@@ -1,8 +1,6 @@
 {
   "resourceType": "Questionnaire",
-  "text": {
-    "status": "generated"
-  },
+  "id": "353",
   "url": "http://hl7.org/fhir/Questionnaire/353",
   "title": "Bumin Inquiry for PoC",
   "status": "draft",
@@ -1052,7 +1050,13 @@
         },
         {
           "linkId": "Current drinker of alcohol (finding) - choice",
-          "code": "219006",
+          "code": [
+            {
+              "system": "http://loinc.org",
+              "code": "219006",
+              "display": "Current drinker of alcohol (finding)"
+            }
+          ],
           "text": "현재 음주 (종류)",
           "type": "choice",
           "enableWhen": [
@@ -1108,7 +1112,13 @@
             }
           ],
           "linkId": "Current drinker of alcohol (finding) - quantity",
-          "code": "219006",
+          "code": [
+            {
+              "system": "http://loinc.org",
+              "code": "219006",
+              "display": "Current drinker of alcohol (finding)"
+            }
+          ],
           "text": "현재 음주 (잔수/일주일)",
           "type": "quantity",
           "enableWhen": [
@@ -1124,7 +1134,13 @@
         },
         {
           "linkId": "Current non-drinker of alcohol (finding) - choice",
-          "code": "219006",
+          "code": [
+            {
+              "system": "http://loinc.org",
+              "code": "219006",
+              "display": "Current drinker of alcohol (finding)"
+            }
+          ],
           "text": "과거 음주 (종류)",
           "type": "choice",
           "enableWhen": [
@@ -1180,7 +1196,13 @@
             }
           ],
           "linkId": "Current non-drinker of alcohol (finding) - quantity",
-          "code": "219006",
+          "code": [
+            {
+              "system": "http://loinc.org",
+              "code": "219006",
+              "display": "Current drinker of alcohol (finding)"
+            }
+          ],
           "text": "과거 음주 (잔수/일주일)",
           "type": "quantity",
           "enableWhen": [
@@ -1493,7 +1515,13 @@
           "text": "피부",
           "linkId": "DERMA",
           "type": "choice",
-          "code": "364528001",
+          "code": [
+            {
+              "system": "http://loinc.org",
+              "code": "364528001",
+              "display": "Skin observable (observable entity)"
+            }
+          ],
           "repeats": true,
           "answerOption": [
             { "valueCoding": {"code": "418363000","display": "가려움"}},
@@ -1510,7 +1538,13 @@
           "text": "머리",
           "linkId": "NEURO(NR)",
           "type": "choice",
-          "code": "364404000",
+          "code": [
+            {
+              "system": "http://loinc.org",
+              "code": "364404000",
+              "display": "Head region observable (observable entity)"
+            }
+          ],
           "repeats": true,
           "answerOption": [
             { "valueCoding": {"code": "25064002","display": "머리 아픔"}},
@@ -1526,7 +1560,13 @@
           "text": "눈",
           "linkId": "OPT",
           "type": "choice",
-          "code": "E414174009",
+          "code": [
+            {
+              "system": "http://loinc.org",
+              "code": "E414174009",
+              "display": "Eye observable (observable entity)"
+            }
+          ],
           "repeats": true,
           "answerOption": [
             { "valueCoding": {"code": "24982008","display": "물체가 두개로 보임"}},
