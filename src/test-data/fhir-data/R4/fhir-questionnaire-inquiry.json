@@ -12,8 +12,8 @@
   "date": "2010",
   "code": [
     {
-      "system": "http://example.org/system/code/lifelines/nl",
       "code": "VL 1-1, 18-65_1.2.2",
+      "system": "http://example.org/system/code/lifelines/nl",
       "display": "Basic Question"
     }
   ],
@@ -85,8 +85,8 @@
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unitOption",
                   "valueCoding": {
-                    "system": "http://unitsofmeasure.org",
                     "code": "mm[Hg]",
+                    "system": "http://unitsofmeasure.org",
                     "display": "mm[Hg]"
                   }
                 }
@@ -107,8 +107,8 @@
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unitOption",
                   "valueCoding": {
-                    "system": "http://unitsofmeasure.org",
                     "code": "millimeter of mercury",
+                    "system": "http://unitsofmeasure.org",
                     "display": "mm[Hg]"
                   }
                 }
@@ -173,8 +173,8 @@
             {
               "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unitOption",
               "valueCoding": {
-                "system": "http://unitsofmeasure.org",
                 "code": "Cel",
+                "system": "http://unitsofmeasure.org",
                 "display": "℃"
               }
             }
@@ -195,8 +195,8 @@
             {
               "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unitOption",
               "valueCoding": {
-                "system": "http://unitsofmeasure.org",
                 "code": "cm",
+                "system": "http://unitsofmeasure.org",
                 "display": "cm"
               }
             }
@@ -220,8 +220,8 @@
       "type": "group",
       "code": [
         {
-          "system": "http://loinc.org",
           "code": "10154-3",
+          "system": "http://loinc.org",
           "display": "Chief complaint Narrative - Reported"
         }
       ],
@@ -237,8 +237,8 @@
               "valueCodeableConcept": {
                 "coding": [
                   {
-                    "system": "http://hl7.org/fhir/questionnaire-item-control",
                     "code": "autocomplete",
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
                     "display": "Auto-complete"
                   }
                 ],
@@ -264,8 +264,8 @@
           "type": "integer",
           "code": [
             {
-              "system": "http://loinc.org",
               "code": "76425-8",
+              "system": "http://loinc.org",
               "display": "Date of onset - Reported"
             }
           ]
@@ -276,8 +276,8 @@
           "type": "date",
           "code": [
             {
-              "system": "http://loinc.org",
               "code": "76425-8",
+              "system": "http://loinc.org",
               "display": "Date of onset - Reported"
             }
           ]
@@ -288,8 +288,8 @@
           "type": "time",
           "code": [
             {
-              "system": "http://loinc.org",
               "code": "76425-8",
+              "system": "http://loinc.org",
               "display": "Date of onset - Reported"
             }
           ]
@@ -300,8 +300,8 @@
           "type": "choice",
           "code": [
             {
-              "system": "http://loinc.org",
               "code": "89261-2",
+              "system": "http://loinc.org",
               "display": "Clinical course"
             }
           ],
@@ -344,8 +344,8 @@
           "type": "choice",
           "code": [
             {
-              "system": "http://loinc.org",
               "code": "56826-1",
+              "system": "http://loinc.org",
               "display": "Problem frequency"
             }
           ],
@@ -394,8 +394,8 @@
           "type": "choice",
           "code": [
             {
-              "system": "http://loinc.org",
               "code": "64748-7",
+              "system": "http://loinc.org",
               "display": "Symptoms duration"
             }
           ],
@@ -456,8 +456,8 @@
           "type": "choice",
           "code": [
             {
-              "system": "http://loinc.org",
               "code": "39111-0",
+              "system": "http://loinc.org",
               "display": "Body site"
             }
           ],
@@ -482,8 +482,8 @@
           "type": "choice",
           "code": [
             {
-              "system": "http://loinc.org",
               "code": "20228-3",
+              "system": "http://loinc.org",
               "display": "Anatomic part Laterality"
             }
           ],
@@ -530,8 +530,8 @@
           ],
           "code": [
             {
-              "system": "http://loinc.org",
               "code": "80316-3",
+              "system": "http://loinc.org",
               "display": "Pain scale [Type]"
             }
           ]
@@ -553,8 +553,8 @@
                     "coding": [
                       {
                         "code": "help",
-                        "display": "Help-Button",
-                        "system": "http://hl7.org/fhir/questionnaire-item-control"
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "display": "Help-Button"
                       }
                     ]
                   }
@@ -603,8 +603,8 @@
           "valueCodeableConcept": {
             "coding": [
               {
-                "system": "http://hl7.org/fhir/questionnaire-item-control",
                 "code": "gtable",
+                "system": "http://hl7.org/fhir/questionnaire-item-control",
                 "display": "Group Table"
               }
             ],
@@ -623,38 +623,168 @@
           "type": "choice",
           "code": [
             {
-              "system": "http://loinc.org",
               "code": "75326-9",
+              "system": "http://loinc.org",
               "display": "Problem"
             }
           ],
           "answerOption": [
-            { "valueCoding": {"code": "38341003","display": "고혈압"}},
-            { "valueCoding": {"code": "10725009","display": "양성고혈압"}},
-            { "valueCoding": {"code": "73211009","display": "당뇨"}},
-            { "valueCoding": {"code": "44054006","display": "2형당뇨"}},
-            { "valueCoding": {"code": "370992007","display": "이상지질혈증"}},
-            { "valueCoding": {"code": "66071002","display": "B형 간염"}},
-            { "valueCoding": {"code": "56717001","display": "결핵"}},
-            { "valueCoding": {"code": "63739005","display": "관상동맥질환"}},
-            { "valueCoding": {"code": "698247007","display": "부정맥"}},
-            { "valueCoding": {"code": "49436004","display": "심방세동"}},
-            { "valueCoding": {"code": "13645005","display": "만성폐쇄성폐질환"}},
-            { "valueCoding": {"code": "195967001","display": "천식"}},
-            { "valueCoding": {"code": "86094006","display": "만성비염"}},
-            { "valueCoding": {"code": "90708001","display": "신장질환"}},
-            { "valueCoding": {"code": "265764009","display": "투석"}},
-            { "valueCoding": {"code": "128606002","display": "비뇨기계질환"}},
-            { "valueCoding": {"code": "313413008","display": "결석질환"}},
-            { "valueCoding": {"code": "362969004","display": "내분비계질환"}},
-            { "valueCoding": {"code": "14304000","display": "갑상선질환"}},
-            { "valueCoding": {"code": "396275006","display": "골관절염"}},
-            { "valueCoding": {"code": "323301000119109","display": "왼쪽무릎관절염"}},
-            { "valueCoding": {"code": "323321000119100","display": "오른쪽무릎관절염"}},
-            { "valueCoding": {"code": "64859006","display": "골다공증"}},
-            { "valueCoding": {"code": "312894000","display": "골감소증"}},
-            { "valueCoding": {"code": "68496003","display": "대장용종"}},
-            { "valueCoding": {"code": "363346000","display": "악성종양"}}
+            {
+              "valueCoding": {
+                "code": "38341003",
+                "display": "고혈압"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "10725009",
+                "display": "양성고혈압"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "73211009",
+                "display": "당뇨"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "44054006",
+                "display": "2형당뇨"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "370992007",
+                "display": "이상지질혈증"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "66071002",
+                "display": "B형 간염"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "56717001",
+                "display": "결핵"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "63739005",
+                "display": "관상동맥질환"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "698247007",
+                "display": "부정맥"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "49436004",
+                "display": "심방세동"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "13645005",
+                "display": "만성폐쇄성폐질환"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "195967001",
+                "display": "천식"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "86094006",
+                "display": "만성비염"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "90708001",
+                "display": "신장질환"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "265764009",
+                "display": "투석"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "128606002",
+                "display": "비뇨기계질환"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "313413008",
+                "display": "결석질환"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "362969004",
+                "display": "내분비계질환"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "14304000",
+                "display": "갑상선질환"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "396275006",
+                "display": "골관절염"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "323301000119109",
+                "display": "왼쪽무릎관절염"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "323321000119100",
+                "display": "오른쪽무릎관절염"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "64859006",
+                "display": "골다공증"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "312894000",
+                "display": "골감소증"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "68496003",
+                "display": "대장용종"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "363346000",
+                "display": "악성종양"
+              }
+            }
           ]
         },
         {
@@ -671,8 +801,8 @@
           "valueCodeableConcept": {
             "coding": [
               {
-                "system": "http://hl7.org/fhir/questionnaire-item-control",
                 "code": "gtable",
+                "system": "http://hl7.org/fhir/questionnaire-item-control",
                 "display": "Group Table"
               }
             ],
@@ -691,38 +821,168 @@
           "type": "choice",
           "code": [
             {
-              "system": "http://loinc.org",
               "code": "72185-2",
+              "system": "http://loinc.org",
               "display": "Medical history [RHEA]"
             }
           ],
           "answerOption": [
-            { "valueCoding": {"code": "266995000","display": "심혈관계질환"}},
-            { "valueCoding": {"code": "275544003","display": "심장질환"}},
-            { "valueCoding": {"code": "399211009","display": "심근경색"}},
-            { "valueCoding": {"code": "131471000119104","display": "부정맥"}},
-            { "valueCoding": {"code": "275540007","display": "뇌질환"}},
-            { "valueCoding": {"code": "428267002","display": "뇌출혈"}},
-            { "valueCoding": {"code": "431310008","display": "뇌경색"}},
-            { "valueCoding": {"code": "161523006","display": "호흡계질환"}},
-            { "valueCoding": {"code": "266997008","display": "소회기계질환"}},
-            { "valueCoding": {"code": "275552000","display": "신장질환"}},
-            { "valueCoding": {"code": "429025008","display": "신장결석"}},
-            { "valueCoding": {"code": "267002001","display": "비뇨기계질환"}},
-            { "valueCoding": {"code": "161548009","display": "요결석"}},
-            { "valueCoding": {"code": "161554005","display": "남성생식기계질환"}},
-            { "valueCoding": {"code": "161556007","display": "남성불임"}},
-            { "valueCoding": {"code": "271902005","display": "여성생식기계질환"}},
-            { "valueCoding": {"code": "161798008","display": "여성불임"}},
-            { "valueCoding": {"code": "266990005","display": "내분비계질환"}},
-            { "valueCoding": {"code": "90560007","display": "통풍"}},
-            { "valueCoding": {"code": "69896004","display": "류마티스관절염"}},
-            { "valueCoding": {"code": "161568003","display": "골관절염"}},
-            { "valueCoding": {"code": "473120007","display": "골다공증"}},
-            { "valueCoding": {"code": "473442002","display": "골감소증"}},
-            { "valueCoding": {"code": "428283002","display": "대장용종"}},
-            { "valueCoding": {"code": "266987004","display": "악성종양"}},
-            { "valueCoding": {"code": "None","display": "없음"}}
+            {
+              "valueCoding": {
+                "code": "266995000",
+                "display": "심혈관계질환"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "275544003",
+                "display": "심장질환"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "399211009",
+                "display": "심근경색"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "131471000119104",
+                "display": "부정맥"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "275540007",
+                "display": "뇌질환"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "428267002",
+                "display": "뇌출혈"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "431310008",
+                "display": "뇌경색"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "161523006",
+                "display": "호흡계질환"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "266997008",
+                "display": "소회기계질환"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "275552000",
+                "display": "신장질환"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "429025008",
+                "display": "신장결석"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "267002001",
+                "display": "비뇨기계질환"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "161548009",
+                "display": "요결석"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "161554005",
+                "display": "남성생식기계질환"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "161556007",
+                "display": "남성불임"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "271902005",
+                "display": "여성생식기계질환"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "161798008",
+                "display": "여성불임"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "266990005",
+                "display": "내분비계질환"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "90560007",
+                "display": "통풍"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "69896004",
+                "display": "류마티스관절염"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "161568003",
+                "display": "골관절염"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "473120007",
+                "display": "골다공증"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "473442002",
+                "display": "골감소증"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "428283002",
+                "display": "대장용종"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "266987004",
+                "display": "악성종양"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "None",
+                "display": "없음"
+              }
+            }
           ]
         },
         {
@@ -739,8 +999,8 @@
           "valueCodeableConcept": {
             "coding": [
               {
-                "system": "http://hl7.org/fhir/questionnaire-item-control",
                 "code": "gtable",
+                "system": "http://hl7.org/fhir/questionnaire-item-control",
                 "display": "Group Table"
               }
             ],
@@ -759,36 +1019,156 @@
           "type": "choice",
           "code": [
             {
-              "system": "http://loinc.org",
               "code": "72185-2",
+              "system": "http://loinc.org",
               "display": "Medical history [RHEA]"
             }
           ],
           "answerOption": [
-            { "valueCoding": {"code": "428449006","display": "뇌수술"}},
-            { "valueCoding": {"code": "428661006","display": "뇌동맥루수슬"}},
-            { "valueCoding": {"code": "429074009","display": "심혈관계 처치 및 수술"}},
-            { "valueCoding": {"code": "161624007","display": "폐절제술"}},
-            { "valueCoding": {"code": "10997971000119103","display": "폐엽절제술"}},
-            { "valueCoding": {"code": "111981000119100","display": "췌장절제술"}},
-            { "valueCoding": {"code": "427817003","display": "위절제슬"}},
-            { "valueCoding": {"code": "429281008","display": "간절제술"}},
-            { "valueCoding": {"code": "161671001","display": "간이식수술"}},
-            { "valueCoding": {"code": "161626009","display": "비장절제술"}},
-            { "valueCoding": {"code": "428882003","display": "담낭절제술"}},
-            { "valueCoding": {"code": "428251008","display": "충수돌기절제술"}},
-            { "valueCoding": {"code": "61531000119104","display": "신장절제술"}},
-            { "valueCoding": {"code": "161665007","display": "신장이식수술"}},
-            { "valueCoding": {"code": "428892006","display": "갑상선제거술"}},
-            { "valueCoding": {"code": "71661000210109","display": "유방수술"}},
-            { "valueCoding": {"code": "161619009","display": "척추수술"}},
-            { "valueCoding": {"code": "721901009","display": "근골격계수술"}},
-            { "valueCoding": {"code": "1211000119105","display": "무릎관절수술"}},
-            { "valueCoding": {"code": "698453009","display": "엉덩이뼈관절수술"}},
-            { "valueCoding": {"code": "161800001","display": "자궁절제술"}},
-            { "valueCoding": {"code": "391083006","display": "양측난소절제술"}},
-            { "valueCoding": {"code": "427851004","display": "양측난관난소절제술"}},
-            { "valueCoding": {"code": "429763009","display": "전자궁절제술 & 양쪽난관난소절제술"}}
+            {
+              "valueCoding": {
+                "code": "428449006",
+                "display": "뇌수술"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "428661006",
+                "display": "뇌동맥루수슬"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "429074009",
+                "display": "심혈관계 처치 및 수술"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "161624007",
+                "display": "폐절제술"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "10997971000119103",
+                "display": "폐엽절제술"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "111981000119100",
+                "display": "췌장절제술"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "427817003",
+                "display": "위절제슬"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "429281008",
+                "display": "간절제술"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "161671001",
+                "display": "간이식수술"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "161626009",
+                "display": "비장절제술"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "428882003",
+                "display": "담낭절제술"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "428251008",
+                "display": "충수돌기절제술"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "61531000119104",
+                "display": "신장절제술"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "161665007",
+                "display": "신장이식수술"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "428892006",
+                "display": "갑상선제거술"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "71661000210109",
+                "display": "유방수술"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "161619009",
+                "display": "척추수술"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "721901009",
+                "display": "근골격계수술"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "1211000119105",
+                "display": "무릎관절수술"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "698453009",
+                "display": "엉덩이뼈관절수술"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "161800001",
+                "display": "자궁절제술"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "391083006",
+                "display": "양측난소절제술"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "427851004",
+                "display": "양측난관난소절제술"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "429763009",
+                "display": "전자궁절제술 & 양쪽난관난소절제술"
+              }
+            }
           ]
         },
         {
@@ -804,30 +1184,115 @@
       "type": "choice",
       "code": [
         {
-          "system": "http://loinc.org",
           "code": "48765-2",
+          "system": "http://loinc.org",
           "display": "Allergies"
         }
       ],
       "repeats": true,
       "answerOption": [
-        { "valueCoding": {"code": "61582004","display": "알레르기비염"}},
-        { "valueCoding": {"code": "24079001","display": "아토피피부염"}},
-        { "valueCoding": {"code": "473460002","display": "알레르기결막염"}},
-        { "valueCoding": {"code": "40275004","display": "접촉성피부염"}},
-        { "valueCoding": {"code": "419199007","display": "물질알레르기"}},
-        { "valueCoding": {"code": "414285001","display": "식품알레르기"}},
-        { "valueCoding": {"code": "782555009","display": "우유알레르기"}},
-        { "valueCoding": {"code": "91935009","display": "땅콩알레르기"}},
-        { "valueCoding": {"code": "416098002","display": "약품알레르기"}},
-        { "valueCoding": {"code": "293586001","display": "아스피린알레르기"}},
-        { "valueCoding": {"code": "91936005","display": "페니시린알레르기"}},
-        { "valueCoding": {"code": "429239002","display": "설파제 알레르기"}},
-        { "valueCoding": {"code": "717234006","display": "동물알레르기"}},
-        { "valueCoding": {"code": "300910009","display": "꽃가루알레르기"}},
-        { "valueCoding": {"code": "419474003","display": "곰팡이알레르기"}},
-        { "valueCoding": {"code": "390952000","display": "먼지알레르기"}},
-        { "valueCoding": {"code": "1155942004","display": "금속알레르기"}}
+        {
+          "valueCoding": {
+            "code": "61582004",
+            "display": "알레르기비염"
+          }
+        },
+        {
+          "valueCoding": {
+            "code": "24079001",
+            "display": "아토피피부염"
+          }
+        },
+        {
+          "valueCoding": {
+            "code": "473460002",
+            "display": "알레르기결막염"
+          }
+        },
+        {
+          "valueCoding": {
+            "code": "40275004",
+            "display": "접촉성피부염"
+          }
+        },
+        {
+          "valueCoding": {
+            "code": "419199007",
+            "display": "물질알레르기"
+          }
+        },
+        {
+          "valueCoding": {
+            "code": "414285001",
+            "display": "식품알레르기"
+          }
+        },
+        {
+          "valueCoding": {
+            "code": "782555009",
+            "display": "우유알레르기"
+          }
+        },
+        {
+          "valueCoding": {
+            "code": "91935009",
+            "display": "땅콩알레르기"
+          }
+        },
+        {
+          "valueCoding": {
+            "code": "416098002",
+            "display": "약품알레르기"
+          }
+        },
+        {
+          "valueCoding": {
+            "code": "293586001",
+            "display": "아스피린알레르기"
+          }
+        },
+        {
+          "valueCoding": {
+            "code": "91936005",
+            "display": "페니시린알레르기"
+          }
+        },
+        {
+          "valueCoding": {
+            "code": "429239002",
+            "display": "설파제 알레르기"
+          }
+        },
+        {
+          "valueCoding": {
+            "code": "717234006",
+            "display": "동물알레르기"
+          }
+        },
+        {
+          "valueCoding": {
+            "code": "300910009",
+            "display": "꽃가루알레르기"
+          }
+        },
+        {
+          "valueCoding": {
+            "code": "419474003",
+            "display": "곰팡이알레르기"
+          }
+        },
+        {
+          "valueCoding": {
+            "code": "390952000",
+            "display": "먼지알레르기"
+          }
+        },
+        {
+          "valueCoding": {
+            "code": "1155942004",
+            "display": "금속알레르기"
+          }
+        }
       ]
     },
     {
@@ -1052,8 +1517,8 @@
           "linkId": "Current drinker of alcohol (finding) - choice",
           "code": [
             {
-              "system": "http://loinc.org",
               "code": "219006",
+              "system": "http://loinc.org",
               "display": "Current drinker of alcohol (finding)"
             }
           ],
@@ -1114,8 +1579,8 @@
           "linkId": "Current drinker of alcohol (finding) - quantity",
           "code": [
             {
-              "system": "http://loinc.org",
               "code": "219006",
+              "system": "http://loinc.org",
               "display": "Current drinker of alcohol (finding)"
             }
           ],
@@ -1136,8 +1601,8 @@
           "linkId": "Current non-drinker of alcohol (finding) - choice",
           "code": [
             {
-              "system": "http://loinc.org",
               "code": "219006",
+              "system": "http://loinc.org",
               "display": "Current drinker of alcohol (finding)"
             }
           ],
@@ -1198,8 +1663,8 @@
           "linkId": "Current non-drinker of alcohol (finding) - quantity",
           "code": [
             {
-              "system": "http://loinc.org",
               "code": "219006",
+              "system": "http://loinc.org",
               "display": "Current drinker of alcohol (finding)"
             }
           ],
@@ -1319,8 +1784,8 @@
           "valueCodeableConcept": {
             "coding": [
               {
-                "system": "http://hl7.org/fhir/questionnaire-item-control",
                 "code": "gtable",
+                "system": "http://hl7.org/fhir/questionnaire-item-control",
                 "display": "Group Table"
               }
             ],
@@ -1348,8 +1813,8 @@
               "valueCodeableConcept": {
                 "coding": [
                   {
-                    "system": "http://hl7.org/fhir/questionnaire-item-control",
                     "code": "autocomplete",
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
                     "display": "Auto-complete"
                   }
                 ],
@@ -1395,8 +1860,8 @@
           "valueCodeableConcept": {
             "coding": [
               {
-                "system": "http://hl7.org/fhir/questionnaire-item-control",
                 "code": "gtable",
+                "system": "http://hl7.org/fhir/questionnaire-item-control",
                 "display": "Group Table"
               }
             ],
@@ -1414,23 +1879,107 @@
           "text": "약 이름",
           "type": "choice",
           "answerOption": [
-            { "valueCoding": {"code": "1182007","display": "혈압약"}},
-            { "valueCoding": {"code": "384953001","display": "당뇨약"}},
-            { "valueCoding": {"code": "373267003","display": "이상지질혈증약"}},
-            { "valueCoding": {"code": "255631004","display": "항생제"}},
-            { "valueCoding": {"code": "788081006","display": "항바이러스제"}},
-            { "valueCoding": {"code": "788023007","display": "항진균제"}},
-            { "valueCoding": {"code": "53009005","display": "진통제"}},
-            { "valueCoding": {"code": "360253007","display": "천식약"}},
-            { "valueCoding": {"code": "10784006","display": "정신과약"}},
-            { "valueCoding": {"code": "255635008","display": "항불안제"}},
-            { "valueCoding": {"code": "36236003","display": "항우울제"}},
-            { "valueCoding": {"code": "58050004","display": "항파킨슨제재"}},
-            { "valueCoding": {"code": "303960004","display": "항혈전제 (항혈소판제와 항응고제)"}},
-            { "valueCoding": {"code": "22091006","display": "호르몬제"}},
-            { "valueCoding": {"code": "69431002","display": "면역억제제"}},
-            { "valueCoding": {"code": "27867009","display": "항암제"}},
-            { "valueCoding": {"code": "395114000","display": "한약"}
+            {
+              "valueCoding": {
+                "code": "1182007",
+                "display": "혈압약"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "384953001",
+                "display": "당뇨약"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "373267003",
+                "display": "이상지질혈증약"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "255631004",
+                "display": "항생제"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "788081006",
+                "display": "항바이러스제"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "788023007",
+                "display": "항진균제"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "53009005",
+                "display": "진통제"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "360253007",
+                "display": "천식약"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "10784006",
+                "display": "정신과약"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "255635008",
+                "display": "항불안제"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "36236003",
+                "display": "항우울제"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "58050004",
+                "display": "항파킨슨제재"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "303960004",
+                "display": "항혈전제 (항혈소판제와 항응고제)"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "22091006",
+                "display": "호르몬제"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "69431002",
+                "display": "면역억제제"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "27867009",
+                "display": "항암제"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "395114000",
+                "display": "한약"
+              }
             }
           ]
         },
@@ -1458,8 +2007,8 @@
           "valueCodeableConcept": {
             "coding": [
               {
-                "system": "http://hl7.org/fhir/questionnaire-item-control",
                 "code": "gtable",
+                "system": "http://hl7.org/fhir/questionnaire-item-control",
                 "display": "Group Table"
               }
             ],
@@ -1477,17 +2026,72 @@
           "text": "관계",
           "type": "choice",
           "answerOption": [
-            { "valueCoding": {"code": "34871008","display": "할아버지"}},
-            { "valueCoding": {"code": "113157001","display": "할머니"}},
-            { "valueCoding": {"code": "394857004","display": "외할아버지"}},
-            { "valueCoding": {"code": "394859001","display": "외할머니"}},
-            { "valueCoding": {"code": "66839005","display": "아버지"}},
-            { "valueCoding": {"code": "72705000","display": "어머니"}},
-            { "valueCoding": {"code": "442041000124107","display": "아버지의 남자형제"}},
-            { "valueCoding": {"code": "736455007","display": "아버지의 여자형제"}},
-            { "valueCoding": {"code": "442031000124102","display": "어머니의 남자형제"}},
-            { "valueCoding": {"code": "736454006","display": "어머니의 여자형제"}},
-            { "valueCoding": {"code": "75005","display": "형제"}}
+            {
+              "valueCoding": {
+                "code": "34871008",
+                "display": "할아버지"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "113157001",
+                "display": "할머니"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "394857004",
+                "display": "외할아버지"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "394859001",
+                "display": "외할머니"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "66839005",
+                "display": "아버지"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "72705000",
+                "display": "어머니"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "442041000124107",
+                "display": "아버지의 남자형제"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "736455007",
+                "display": "아버지의 여자형제"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "442031000124102",
+                "display": "어머니의 남자형제"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "736454006",
+                "display": "어머니의 여자형제"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "75005",
+                "display": "형제"
+              }
+            }
           ]
         },
         {
@@ -1495,13 +2099,48 @@
           "text": "병/증상 명",
           "type": "choice",
           "answerOption": [
-            { "valueCoding": {"code": "160357008","display": "고혈압"}},
-            { "valueCoding": {"code": "160303001","display": "당뇨"}},
-            { "valueCoding": {"code": "275104002","display": "뇌졸중"}},
-            { "valueCoding": {"code": "429961000","display": "치매"}},
-            { "valueCoding": {"code": "725117008","display": "고지혈증"}},
-            { "valueCoding": {"code": "275937001","display": "악성종양"}},
-            { "valueCoding": {"code": "160417009","display": "유전질환"}}
+            {
+              "valueCoding": {
+                "code": "160357008",
+                "display": "고혈압"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "160303001",
+                "display": "당뇨"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "275104002",
+                "display": "뇌졸중"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "429961000",
+                "display": "치매"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "725117008",
+                "display": "고지혈증"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "275937001",
+                "display": "악성종양"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "160417009",
+                "display": "유전질환"
+              }
+            }
           ]
         }
       ]
@@ -1517,22 +2156,86 @@
           "type": "choice",
           "code": [
             {
-              "system": "http://loinc.org",
               "code": "364528001",
+              "system": "http://loinc.org",
               "display": "Skin observable (observable entity)"
             }
           ],
           "repeats": true,
           "answerOption": [
-            { "valueCoding": {"code": "418363000","display": "가려움"}},
-            { "valueCoding": {"code": "271807003","display": "피부에 뭐가 남"}},
-            { "valueCoding": {"code": "225549006","display": "피부가 노랗게 보임"}}
-          ],
-          "enableWhen": [
-            {"question": "CC Name","operator": "=","answerCoding": {"code": "52475004"}},
-            {"question": "CC Name","operator": "=","answerCoding": {"code": "297957009"}}
-          ],
-          "enableBehavior": "any"
+            {
+              "valueCoding": {
+                "code": "418363000",
+                "display": "가려움"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "271807003",
+                "display": "피부에 뭐가 남"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "225549006",
+                "display": "피부가 노랗게 보임"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "386661006",
+                "display": "열이 남"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "43724002",
+                "display": "추운 느낌이 듦"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "42984000",
+                "display": "밤에 땀이 남"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "367391008",
+                "display": "권태감"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "64779008",
+                "display": "출혈경향"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "89362005",
+                "display": "체중 감소"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "363806002",
+                "display": "6개월간 체중이 몇 Kg 감소하었나요?"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "248349002",
+                "display": "6개원간 체중이 몇 % 감소하였나요?"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "65124004",
+                "display": "몸이 부은 듯 함"
+              }
+            }
+          ]
         },
         {
           "text": "머리",
@@ -1540,21 +2243,26 @@
           "type": "choice",
           "code": [
             {
-              "system": "http://loinc.org",
               "code": "364404000",
+              "system": "http://loinc.org",
               "display": "Head region observable (observable entity)"
             }
           ],
           "repeats": true,
           "answerOption": [
-            { "valueCoding": {"code": "25064002","display": "머리 아픔"}},
-            { "valueCoding": {"code": "404640003","display": "어지러움"}}
-          ],
-          "enableWhen": [
-            {"question": "CC Name","operator": "=","answerCoding": {"code": "404640003"}},
-            {"question": "CC Name","operator": "=","answerCoding": {"code": "71642004"}}
-          ],
-          "enableBehavior": "any"
+            {
+              "valueCoding": {
+                "code": "25064002",
+                "display": "머리 아픔"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "404640003",
+                "display": "어지러움"
+              }
+            }
+          ]
         },
         {
           "text": "눈",
@@ -1562,22 +2270,584 @@
           "type": "choice",
           "code": [
             {
-              "system": "http://loinc.org",
               "code": "E414174009",
+              "system": "http://loinc.org",
               "display": "Eye observable (observable entity)"
             }
           ],
           "repeats": true,
           "answerOption": [
-            { "valueCoding": {"code": "24982008","display": "물체가 두개로 보임"}},
-            { "valueCoding": {"code": "63102001","display": "시야가 이상함"}}
+            {
+              "valueCoding": {
+                "code": "24982008",
+                "display": "물체가 두개로 보임"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "63102001",
+                "display": "시야가 이상함"
+              }
+            }
+          ]
+        },
+        {
+          "text": "이비인후",
+          "linkId": "ENT",
+          "type": "choice",
+          "code": [
+            {
+              "code": "363989006",
+              "system": "http://loinc.org",
+              "display": "Ear, nose / throat observable (observable entity)"
+            }
           ],
-          "enableWhen": [
-            {"question": "CC Name","operator": "=","answerCoding": {"code": "225581002"}},
-            {"question": "CC Name","operator": "=","answerCoding": {"code": "781682005"}},
-            {"question": "CC Name","operator": "=","answerCoding": {"code": "193982009"}}
+          "repeats": true,
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "301354004",
+                "display": "귀 통증"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "15188001",
+                "display": "잘 안들림"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "60862001",
+                "display": "귀에서 소리가 남"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "64531003",
+                "display": "콧물"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "232209000",
+                "display": "코막힘"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "249366005",
+                "display": "코피"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "162397003",
+                "display": "입안의 목 부분이 아픔"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "40739000",
+                "display": "삼키기 어려움"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "267103008",
+                "display": "목에 덩어리가 껴있는 듯한 느낌"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "50219008",
+                "display": "목이 쉼"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "274657005",
+                "display": "목소리 변화"
+              }
+            }
+          ]
+        },
+        {
+          "text": "목",
+          "linkId": "NS-OS",
+          "type": "choice",
+          "code": [
+            {
+              "code": "364411001",
+              "system": "http://loinc.org",
+              "display": "Neck region observable (observable entity)"
+            }
           ],
-          "enableBehavior": "any"
+          "repeats": true,
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "161882006",
+                "display": "목이 뻣뻣함"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "81680005",
+                "display": "목 아픔"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "82971005",
+                "display": "목이 잘 안움직여짐"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "299703001",
+                "display": "목에 덩어리가 만져짐"
+              }
+            }
+          ]
+        },
+        {
+          "text": "가슴",
+          "linkId": "GS",
+          "type": "choice",
+          "code": [
+            {
+              "code": "364370007",
+              "system": "http://loinc.org",
+              "display": "Breast observable (observable entity)"
+            }
+          ],
+          "repeats": true,
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "54302000",
+                "display": "유두에서 분비물이 나옴"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "248816004",
+                "display": "유방 피부가 울퉁불퉁함"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "89164003",
+                "display": "유방에 덩어리가 만져짐"
+              }
+            }
+          ]
+        },
+        {
+          "text": "호흡기",
+          "linkId": "IM-LUNG",
+          "type": "choice",
+          "code": [
+            {
+              "code": "364048003",
+              "system": "http://loinc.org",
+              "display": "Respiratory observable (observable entity)"
+            }
+          ],
+          "repeats": true,
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "49727002",
+                "display": "기침"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "248595008",
+                "display": "가래"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "66857006",
+                "display": "숨쉴때마다 입에서 피가 나옴"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "8765009",
+                "display": "혈액을 토함"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "267036007",
+                "display": "숨쉬기 힘듬"
+              }
+            }
+          ]
+        },
+        {
+          "text": "심혈관",
+          "linkId": "IM-CARDIO",
+          "type": "choice",
+          "code": [
+            {
+              "code": "364066008",
+              "system": "http://loinc.org",
+              "display": "Cardiovascular observable (observable entity)"
+            }
+          ],
+          "repeats": true,
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "29857009",
+                "display": "가슴 통증"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "80313002",
+                "display": "가슴이 두근거림"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "267036007",
+                "display": "숨쉬기 힘듬"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "60845006",
+                "display": "힘을 조금만 써도 숨이 참"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "3415004",
+                "display": "청색증"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "404640003",
+                "display": "어지러움"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "271808008",
+                "display": "전신부종"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "284521000",
+                "display": "오목부종"
+              }
+            }
+          ]
+        },
+        {
+          "text": "소화",
+          "linkId": "IM-GI",
+          "type": "choice",
+          "code": [
+            {
+              "code": "364142000",
+              "system": "http://loinc.org",
+              "display": "Digestive system observable (observable entity)"
+            }
+          ],
+          "repeats": true,
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "79890006",
+                "display": "식욕이 없음"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "422587007",
+                "display": "미식거림"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "300359004",
+                "display": "구토"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "62315008",
+                "display": "설사"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "14760008",
+                "display": "변비"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "40739000",
+                "display": "삼키기 어려움"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "162031009",
+                "display": "소화불량"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "79922009",
+                "display": "명치통증"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "43364001",
+                "display": "속이 불편함"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "21522001",
+                "display": "복통"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "60728008",
+                "display": "복부팽만"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "389026000",
+                "display": "복수"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "8765009",
+                "display": "혈액을 토함"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "18165001",
+                "display": "황달"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "88111009",
+                "display": "배변습관의 변화"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "2901004",
+                "display": "혈변"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "405729008",
+                "display": "변에 혈액에 묻어남"
+              }
+            }
+          ]
+        },
+        {
+          "text": "비뇨기",
+          "linkId": "URO",
+          "type": "choice",
+          "code": [
+            {
+              "code": "364178005",
+              "system": "http://loinc.org",
+              "display": "Urogenital observable (observable entity)"
+            }
+          ],
+          "repeats": true,
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "49650001",
+                "display": "소변보기 힘듦"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "83128009",
+                "display": "소변량이 적음"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "28442001",
+                "display": "소변량이 많음"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "139394000",
+                "display": "야간에 소변을 봄"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "코드없음",
+                "display": "거품이 많은 소변"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "48340000",
+                "display": "소변을 참기가 어려움"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "34436003",
+                "display": "소변에 피가 섞여있음"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "162116003",
+                "display": "소변을 자주 봄"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "75088002",
+                "display": "소변이 참기가 어려움"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "5972002",
+                "display": "소변이 잘 안나옴"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "162128006",
+                "display": "약한배뇨"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "784285002",
+                "display": "소변을 본 후 시원하지않고 많이 불편함"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "247355005",
+                "display": "옆구리 통증"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "162049009",
+                "display": "왼쪽 옆구리 통증"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "162050009",
+                "display": "오른쪽 옆구리 통증"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "279020002",
+                "display": "남성 생식기 통증"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "162143008",
+                "display": "여성 생식기 통증"
+              }
+            }
+          ]
+        },
+        {
+          "text": "근골격",
+          "linkId": "OS",
+          "type": "choice",
+          "code": [
+            {
+              "code": "364561008",
+              "system": "http://loinc.org",
+              "display": "Musculoskeletal observable (observable entity)"
+            }
+          ],
+          "repeats": true,
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "68962001",
+                "display": "근육통"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "57676002",
+                "display": "관절통"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "12584003",
+                "display": "뼈 통증"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "82971005",
+                "display": "잘 안움직여짐"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "40144003",
+                "display": "아침에 뻣뻣함"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "91019004",
+                "display": "만지면 느낌이 이상함"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "26544005",
+                "display": "근력이 약해짐"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "44695005",
+                "display": "움직일 수가 없음"
+              }
+            }
+          ]
         }
       ]
     }
