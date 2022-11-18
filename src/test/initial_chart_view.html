@@ -112,26 +112,29 @@
       const host = "http://localhost:8083/"
       const myInquiryID = 1010
 
+      let patientName;
+      let patientBirth;
 
       function getInitialChart() {
-        getInquiry(showInitialChart)
+        if (checkInput() == false) return
+        const hapiURL = `${host}api/inquiry/initial-chart`;
+        const popupURL = `test/initial_chart_popup.html?url=${hapiURL}&patientName=${patientName}&patientBirth=${patientBirth}`;
+        window.open(popupURL, "childForm", "width=400, height=300, left=100, top=50");
       }
 
-      function getInquiry(doAfter) {
-        // http://14.32.42.32:8083/api/inquiry/initial-chart?patientName=Peter&birthDate=1974-12-25
-        let patientName = document.getElementById("patientName").value;
+      function checkInput() {
+        patientName = document.getElementById("patientName").value;
         if (patientName === '') {
           alert("환자 이름을 입력해주세요.");
-          return;
+          return false;
         }
-        let patientBirth = document.getElementById("patientBirth").value;
+        patientBirth = document.getElementById("patientBirth").value;
         if (patientBirth === '') {
           alert("환자 생년월일을 입력해주세요.");
-          return;
+          return false;
         }
-        const hapiURL = `${host}api/inquiry/initial-chart?patientName=${patientName}&birthDate=${patientBirth}`;
+        return true;
 
-        getFromHapiFhir(hapiURL, doAfter)
       }
 
       function getFromHapiFhir(hapiURL, doAfter) {
@@ -152,14 +155,6 @@
         });
       }
 
-      function showInitialChart(questionnaireResponse) {
-        console.log(questionnaireResponse.text.div)
-        document.getElementById("initialChartForm").innerHTML = questionnaireResponse.text.div
-      }
-
-
-
-
 
       let gQuestionnaire = null;
       let gQuestionnaireResponse = null;
@@ -167,8 +162,16 @@
       function checkPatientAnswer() {
         getQuestionnaireForm((questionnaire) => {
           gQuestionnaire = questionnaire;
-          getInquiry(showAsQuestionnaireForm);
+          getPatientAnswer(showAsQuestionnaireForm);
         });
+      }
+
+      function getPatientAnswer(doAfter) {
+        if (checkInput() == false) return
+        // http://14.32.42.32:8083/api/inquiry/initial-chart?patientName=Peter&birthDate=1974-12-25
+        const hapiURL = `${host}api/inquiry/initial-chart?patientName=${patientName}&birthDate=${patientBirth}`;
+        getFromHapiFhir(hapiURL, doAfter)
+
       }
 
       function getQuestionnaireForm(doAfter) {

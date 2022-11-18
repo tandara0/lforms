@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width">
+  <title>Initial Chart Popup</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- compiled css file for the web comoponet of LHC-Forms -->
+  <link rel="stylesheet" href="../styles.css">
+  <style>
+    .btn {
+      display: inline-block;
+      margin: 1px;
+      font-weight: normal;
+      text-align: center;
+      white-space: nowrap;
+      vertical-align: middle;
+      border: 1px solid transparent;
+      padding: 2px 6px;
+      font-size: 12px;
+      border-radius: 4px;
+    }
+    .tab {
+      display: inline-block;
+      margin-left: 25px;
+    }
+
+    .btn-success {
+      color: #fff;
+      background-color: #5cb85c;
+      border-color: #4cae4c;
+    }
+
+    .btn-primary {
+      color: #fff;
+      background-color: #337ab7;
+      border-color: #2e6da4;
+    }
+
+    .hide {
+      display: none;
+    }
+
+    body {
+      max-width: 650px;
+    }
+
+  </style>
+</head>
+
+<body style="padding: 1em">
+
+<div class="panel panel-default">
+  <h1 class="panel-heading">초진차트</h1>
+    환자명: <text id="patientName"> </text><br>
+    생년월일: <text id="patientBirth"></text><br>
+  <div id="initialChartForm"></div>
+
+
+</div>
+
+
+
+
+
+    <script type="text/javascript">
+
+      getInquiry(showInitialChart)
+
+      function getInquiry(doAfter) {
+        // http://14.32.42.32:8083/api/inquiry/initial-chart?patientName=Peter&birthDate=1974-12-25
+        const params = new URLSearchParams(location.search)
+        let patientName = params.get('patientName')
+        let patientBirth = params.get('patientBirth')
+        let url = params.get('url')
+
+        document.getElementById("patientName").innerHTML = patientName
+        document.getElementById("patientBirth").innerHTML = patientBirth
+
+        const hapiURL = `${url}?patientName=${patientName}&birthDate=${patientBirth}`;
+
+        getFromHapiFhir(hapiURL, doAfter)
+      }
+
+      function getFromHapiFhir(hapiURL, doAfter) {
+        fetch(hapiURL, {
+          method: 'GET'
+        })
+          .then(function(response)  {
+            console.log(response);
+            if (response.ok) {
+              return response.json();
+            } else if (response.status === 404) {
+              alert("해당 환자를 찾을 수 없습니다.")
+            } else {
+              console.log('Failed');
+            }
+          }).then(function(data) {
+          if (data != null) doAfter(data);
+        });
+      }
+
+      function showInitialChart(questionnaireResponse) {
+        console.log(questionnaireResponse.text.div)
+        document.getElementById("initialChartForm").innerHTML = questionnaireResponse.text.div
+      }
+
+
+
+
+
+
+    </script>
+
+    <!-- zone.js is not included in LHC-Forms web component -->
+    <script src="/assets/lib/zone.min.js"></script>
+    <!-- ES2015 files of the LHC-Forms web component -->
+    <script src="../runtime.js"></script>
+    <script src="../polyfills.js"></script>
+    <script src="../scripts.js" ></script>
+    <script src="../main.js"></script>
+
+  <script src="https://clinicaltables.nlm.nih.gov/lforms-versions/32.1.0/fhir/R4/lformsFHIR.min.js"></script>
+
+  </body>
+</html>
